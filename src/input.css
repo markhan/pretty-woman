@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quicksand:wght@300..700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-light-rose: #e3bac2;
+  --color-light-purple: #cdbddf;
+  --color-light-pink: #ddaed3;
+  --color-light-teal: #d4c5cf;
+
+  --color-dark-gold: #62615b;
+  --color-light-green: #c5d4ca;
+
+  --color-button-hover: --alpha(var(--color-light-rose) / 40%);
+
+  --font-heading: 'Julius Sans One', sans-serif;
+  --font-body: 'Quicksand', sans-serif;
+}
