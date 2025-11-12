@@ -18,3 +18,7 @@
   --font-body: 'Quicksand', sans-serif;
   --font-script: 'Great Vibes', cursive;
 }
+
+.fade-in-up {
+  transition: opacity 0.1s linear, transform 0.1s linear;
+}
