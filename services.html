@@ -8,9 +8,9 @@
   </head>
   <body class="bg-white text-gray-800">
     <header class="absolute top-0 left-0 right-0 z-20 p-4">
-      <nav class="max-w-4xl mx-auto bg-white/50 rounded-full shadow-lg p-1">
-        <div class="flex items-center justify-between">
-          <a href="/" class="ml-2 shrink-0">
+      <nav class="max-w-4xl mx-auto bg-white/30 rounded-full shadow-lg p-1">
+        <div class="grid grid-cols-2 md:grid-cols-3 items-center">
+          <a href="/" class="ml-2 shrink-0 justify-self-start">
             <img
               src="./images/logo.svg"
               alt="PrettyWoman by Jo logo"
@@ -19,17 +19,13 @@
           </a>
 
           <ul
-            class="hidden md:flex items-center gap-6 text-black font-heading font-bold text-lg"
+            class="hidden md:flex items-center gap-6 text-black font-heading font-bold text-lg justify-self-center"
           >
             <li>
-              <a href="index.html#about" class="hover:text-white uppercase"
-                >About</a
-              >
+              <a href="#about" class="hover:text-white uppercase">About</a>
             </li>
             <li>
-              <a href="index.html#gallery" class="hover:text-white uppercase"
-                >Gallery</a
-              >
+              <a href="#gallery" class="hover:text-white uppercase">Gallery</a>
             </li>
             <li>
               <a href="services.html" class="hover:text-white uppercase"
@@ -37,27 +33,82 @@
               >
             </li>
             <li>
-              <a href="index.html#contact" class="hover:text-white uppercase"
-                >Contact</a
-              >
+              <a href="#contact" class="hover:text-white uppercase">Contact</a>
             </li>
           </ul>
 
-          <a
-            href="index.html#contact"
-            class="hidden md:block border border-dark-gold px-5 py-2 rounded-full hover:bg-button-hover hover:text-black mr-2 text-black font-heading font-bold"
-          >
-            Book Now
-          </a>
-
           <button
-            class="md:hidden border border-dark-gold px-3 py-1 rounded-full mr-2"
+            id="mobile-menu-btn"
+            class="md:hidden border border-black p-2 rounded-full mr-2 justify-self-end"
           >
-            Menu
+            <svg
+              id="icon-hamburger"
+              class="w-6 h-6"
+              fill="none"
+              stroke="black"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
           </button>
         </div>
       </nav>
     </header>
+
+    <div
+      id="mobile-menu-backdrop"
+      class="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 invisible opacity-0 transition-opacity duration-300"
+    ></div>
+
+    <div
+      id="mobile-menu-panel"
+      class="fixed top-0 right-0 h-screen w-3/4 max-w-sm bg-gray-200 z-40 p-8 transform translate-x-full transition-transform duration-300"
+    >
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold">Menu</h2>
+        <button id="mobile-menu-close-btn" class="p-2">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="black"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="flex flex-col space-y-4">
+        <li>
+          <a href="services.html" class="text-lg hover:underline">Services</a>
+        </li>
+        <li>
+          <a href="index.html#about" class="text-lg hover:underline">About</a>
+        </li>
+        <li>
+          <a href="index.html#gallery" class="text-lg hover:underline"
+            >Gallery</a
+          >
+        </li>
+        <li>
+          <a href="index.html#contact" class="text-lg hover:underline"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
 
     <main>
       <section
@@ -188,5 +239,50 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Get all the elements we need
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close-btn'); // New
+        const backdrop = document.getElementById('mobile-menu-backdrop');
+        const panel = document.getElementById('mobile-menu-panel');
+        const menuLinks = panel.querySelectorAll('a');
+
+        // Function to open or close the menu
+        function toggleMenu() {
+          // 1. Toggle the panel's position
+          panel.classList.toggle('translate-x-full'); // Slide out
+          panel.classList.toggle('translate-x-0'); // Slide in
+
+          // 2. Toggle the backdrop's visibility
+          backdrop.classList.toggle('opacity-0');
+          backdrop.classList.toggle('opacity-100');
+          backdrop.classList.toggle('invisible');
+
+          // 3. Stop the page from scrolling when menu is open
+          document.body.classList.toggle('overflow-hidden');
+        }
+
+        // --- Event Listeners ---
+
+        // 1. Click the HAMBURGER button to toggle
+        menuBtn.addEventListener('click', toggleMenu);
+
+        // 2. Click the NEW CLOSE button to toggle
+        closeBtn.addEventListener('click', toggleMenu);
+
+        // 3. Click the backdrop to close
+        backdrop.addEventListener('click', toggleMenu);
+
+        // 4. Click any of the links in the menu to close
+        menuLinks.forEach((link) => {
+          link.addEventListener('click', () => {
+            if (panel.classList.contains('translate-x-0')) {
+              toggleMenu();
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
