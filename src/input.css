@@ -22,3 +22,15 @@
 .fade-in-up {
   transition: opacity 0.1s linear, transform 0.1s linear;
 }
+
+/* Hides scrollbar for WebKit (Chrome, Safari, Edge) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hides scrollbar for Firefox */
+/* Hides scrollbar for IE/Edge (older) */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
