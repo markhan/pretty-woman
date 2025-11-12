@@ -1,4 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Julius+Sans+One&family=Quicksand:wght@300..700&display=swap');
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/GreatVibes-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Julius Sans One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/JuliusSansOne-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(/fonts/Quicksand-VariableFont_wght.woff2) format('woff2');
+}
+
 @import 'tailwindcss';
 
 @theme {
