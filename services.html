@@ -22,10 +22,14 @@
             class="hidden md:flex items-center gap-6 text-black font-heading font-bold text-lg justify-self-center"
           >
             <li>
-              <a href="#about" class="hover:text-white uppercase">About</a>
+              <a href="index.html#about" class="hover:text-white uppercase"
+                >About</a
+              >
             </li>
             <li>
-              <a href="#gallery" class="hover:text-white uppercase">Gallery</a>
+              <a href="index.html#gallery" class="hover:text-white uppercase"
+                >Gallery</a
+              >
             </li>
             <li>
               <a href="services.html" class="hover:text-white uppercase"
@@ -33,7 +37,9 @@
               >
             </li>
             <li>
-              <a href="#contact" class="hover:text-white uppercase">Contact</a>
+              <a href="index.html#contact" class="hover:text-white uppercase"
+                >Contact</a
+              >
             </li>
           </ul>
 
@@ -239,50 +245,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Get all the elements we need
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const closeBtn = document.getElementById('mobile-menu-close-btn'); // New
-        const backdrop = document.getElementById('mobile-menu-backdrop');
-        const panel = document.getElementById('mobile-menu-panel');
-        const menuLinks = panel.querySelectorAll('a');
-
-        // Function to open or close the menu
-        function toggleMenu() {
-          // 1. Toggle the panel's position
-          panel.classList.toggle('translate-x-full'); // Slide out
-          panel.classList.toggle('translate-x-0'); // Slide in
-
-          // 2. Toggle the backdrop's visibility
-          backdrop.classList.toggle('opacity-0');
-          backdrop.classList.toggle('opacity-100');
-          backdrop.classList.toggle('invisible');
-
-          // 3. Stop the page from scrolling when menu is open
-          document.body.classList.toggle('overflow-hidden');
-        }
-
-        // --- Event Listeners ---
-
-        // 1. Click the HAMBURGER button to toggle
-        menuBtn.addEventListener('click', toggleMenu);
-
-        // 2. Click the NEW CLOSE button to toggle
-        closeBtn.addEventListener('click', toggleMenu);
-
-        // 3. Click the backdrop to close
-        backdrop.addEventListener('click', toggleMenu);
-
-        // 4. Click any of the links in the menu to close
-        menuLinks.forEach((link) => {
-          link.addEventListener('click', () => {
-            if (panel.classList.contains('translate-x-0')) {
-              toggleMenu();
-            }
-          });
-        });
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
