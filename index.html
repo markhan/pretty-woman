@@ -10,9 +10,9 @@
 
   <body>
     <header class="absolute top-0 left-0 right-0 z-20 p-4">
-      <nav class="max-w-4xl mx-auto bg-white/50 rounded-full shadow-lg p-1">
-        <div class="flex items-center justify-between">
-          <a href="/" class="ml-2 shrink-0">
+      <nav class="max-w-4xl mx-auto bg-white/30 rounded-full shadow-lg p-1">
+        <div class="grid grid-cols-2 md:grid-cols-3 items-center">
+          <a href="/" class="ml-2 shrink-0 justify-self-start">
             <img
               src="./images/logo.svg"
               alt="PrettyWoman by Jo logo"
@@ -21,7 +21,7 @@
           </a>
 
           <ul
-            class="hidden md:flex items-center gap-6 text-black font-heading font-bold text-lg"
+            class="hidden md:flex items-center gap-6 text-black font-heading font-bold text-lg justify-self-center"
           >
             <li>
               <a href="#about" class="hover:text-white uppercase">About</a>
@@ -39,15 +39,8 @@
             </li>
           </ul>
 
-          <a
-            href="#contact"
-            class="hidden md:block border border-dark-gold px-5 py-2 rounded-full hover:bg-button-hover hover:text-black mr-2 text-black font-heading font-bold"
-          >
-            Book Now
-          </a>
-
           <button
-            class="md:hidden border border-dark-gold px-3 py-1 rounded-full mr-2"
+            class="md:hidden border border-gray-500 px-3 py-1 rounded-full mr-2 justify-self-end"
           >
             Menu
           </button>
@@ -55,9 +48,7 @@
       </nav>
     </header>
 
-    <section
-      class="relative h-screen min-h-[500px] flex items-center justify-start"
-    >
+    <section class="relative h-screen flex items-end justify-start">
       <img
         src="./images/hero_wide.webp"
         alt="Serene interior of a beauty salon"
@@ -67,7 +58,7 @@
       <div class="absolute inset-0 bg-black/60 md:bg-black/25"></div>
 
       <div
-        class="relative z-10 text-left p-8 md:p-12 lg:p-16 w-full md:w-1/2 lg:w-1/3 text-white"
+        class="relative z-10 text-left p-8 md:p-12 lg:p-16 w-full md:w-1/2 lg:w-1/3 text-white mb-24"
       >
         <h1 class="text-5xl md:text-7xl font-bold font-heading mb-4 uppercase">
           Welcome to Beauty
@@ -132,84 +123,129 @@
           </p>
         </div>
 
-        <div class="flex overflow-x-auto space-x-4 pb-4 snap-x snap-mandatory">
-          <a
-            href="https://www.instagram.com/p/DQU8mNOiAA9/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-72 md:w-80 shrink-0 snap-center"
+        <div class="relative">
+          <div
+            id="gallery-scroll"
+            class="flex overflow-x-auto space-x-4 pb-4 snap-x snap-mandatory scroll-smooth"
           >
-            <img
-              src="./images/gallery_1.png"
-              alt="A photo of a client's hairstyle from the salon gallery"
-              class="w-full h-96 object-cover rounded-lg shadow-md"
-            />
-          </a>
+            <a
+              href="https://www.instagram.com/p/DQU8mNOiAA9/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-72 md:w-80 shrink-0 snap-center"
+            >
+              <img
+                src="./images/gallery_1.png"
+                alt="A photo of a client's hairstyle from the salon gallery"
+                class="w-full h-96 object-cover rounded-lg shadow-md"
+              />
+            </a>
 
-          <a
-            href="https://www.instagram.com/p/DPZqwo_CMZ8/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-72 md:w-80 shrink-0 snap-center"
-          >
-            <img
-              src="./images/gallery_2.png"
-              alt="A photo of a client's hairstyle from the salon gallery"
-              class="w-full h-96 object-cover rounded-lg shadow-md"
-            />
-          </a>
+            <a
+              href="https://www.instagram.com/p/DPZqwo_CMZ8/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-72 md:w-80 shrink-0 snap-center"
+            >
+              <img
+                src="./images/gallery_2.png"
+                alt="A photo of a client's hairstyle from the salon gallery"
+                class="w-full h-96 object-cover rounded-lg shadow-md"
+              />
+            </a>
 
-          <a
-            href="https://www.instagram.com/p/DNI2UXYsb3Q/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-72 md:w-80 shrink-0 snap-center"
-          >
-            <img
-              src="./images/gallery_3.png"
-              alt="A photo of a client's hairstyle from the salon gallery"
-              class="w-full h-96 object-cover rounded-lg shadow-md"
-            />
-          </a>
+            <a
+              href="https://www.instagram.com/p/DNI2UXYsb3Q/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-72 md:w-80 shrink-0 snap-center"
+            >
+              <img
+                src="./images/gallery_3.png"
+                alt="A photo of a client's hairstyle from the salon gallery"
+                class="w-full h-96 object-cover rounded-lg shadow-md"
+              />
+            </a>
 
-          <a
-            href="https://www.instagram.com/p/DKzc4YSMM7L/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-72 md:w-80 shrink-0 snap-center"
-          >
-            <img
-              src="./images/gallery_4.png"
-              alt="A photo of a client's hairstyle from the salon gallery"
-              class="w-full h-96 object-cover rounded-lg shadow-md"
-            />
-          </a>
+            <a
+              href="https://www.instagram.com/p/DKzc4YSMM7L/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-72 md:w-80 shrink-0 snap-center"
+            >
+              <img
+                src="./images/gallery_4.png"
+                alt="A photo of a client's hairstyle from the salon gallery"
+                class="w-full h-96 object-cover rounded-lg shadow-md"
+              />
+            </a>
 
-          <a
-            href="https://www.instagram.com/prettywomanbyjo/p/DHOP8V9sr71/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-72 md:w-80 shrink-0 snap-center"
-          >
-            <img
-              src="./images/gallery_5.png"
-              alt="A photo of a client's hairstyle from the salon gallery"
-              class="w-full h-96 object-cover rounded-lg shadow-md"
-            />
-          </a>
+            <a
+              href="https://www.instagram.com/prettywomanbyjo/p/DHOP8V9sr71/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-72 md:w-80 shrink-0 snap-center"
+            >
+              <img
+                src="./images/gallery_5.png"
+                alt="A photo of a client's hairstyle from the salon gallery"
+                class="w-full h-96 object-cover rounded-lg shadow-md"
+              />
+            </a>
 
-          <a
-            href="https://www.instagram.com/p/DGfqWplMmgz/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block w-72 md:w-80 shrink-0 snap-center"
+            <a
+              href="https://www.instagram.com/p/DGfqWplMmgz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-72 md:w-80 shrink-0 snap-center"
+            >
+              <img
+                src="./images/gallery_6.png"
+                alt="A photo of a client's hairstyle from the salon gallery"
+                class="w-full h-96 object-cover rounded-lg shadow-md"
+              />
+            </a>
+          </div>
+
+          <button
+            id="scroll-left-btn"
+            class="hidden md:flex items-center justify-center w-12 h-12 bg-gray-100/70 hover:bg-gray-100 rounded-full shadow-md absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-0 z-10"
           >
-            <img
-              src="./images/gallery_6.png"
-              alt="A photo of a client's hairstyle from the salon gallery"
-              class="w-full h-96 object-cover rounded-lg shadow-md"
-            />
-          </a>
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <button
+            id="scroll-right-btn"
+            class="hidden md:flex items-center justify-center w-12 h-12 bg-gray-100/70 hover:bg-gray-100 rounded-full shadow-md absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 z-10"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
@@ -311,5 +347,31 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Wait for the page to load
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get the elements
+        const gallery = document.getElementById('gallery-scroll');
+        const scrollLeftBtn = document.getElementById('scroll-left-btn');
+        const scrollRightBtn = document.getElementById('scroll-right-btn');
+
+        // Make sure all elements exist before adding listeners
+        if (gallery && scrollLeftBtn && scrollRightBtn) {
+          // Set how many pixels to scroll
+          const scrollAmount = 1000; // You can adjust this value
+
+          // Add click event for the right button
+          scrollRightBtn.addEventListener('click', function () {
+            gallery.scrollLeft += scrollAmount;
+          });
+
+          // Add click event for the left button
+          scrollLeftBtn.addEventListener('click', function () {
+            gallery.scrollLeft -= scrollAmount;
+          });
+        }
+      });
+    </script>
   </body>
 </html>
