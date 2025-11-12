@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Julius+Sans+One&family=Quicksand:wght@300..700&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -11,7 +11,10 @@
   --color-light-green: #c5d4ca;
 
   --color-button-hover: --alpha(var(--color-light-rose) / 40%);
+  --color-footer-from: #667172;
+  --color-footer-to: #363936;
 
   --font-heading: 'Julius Sans One', sans-serif;
   --font-body: 'Quicksand', sans-serif;
+  --font-script: 'Great Vibes', cursive;
 }
