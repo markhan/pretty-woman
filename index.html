@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Beauty Salon</title>
 
+    <meta
+      name="description"
+      content="Welcome to Pretty Woman by Jo. A full-service beauty salon in Zagreb offering haircuts, coloring, nail services, and more."
+    />
+
     <link href="./src/output.css" rel="stylesheet" />
   </head>
 
@@ -41,6 +46,7 @@
 
           <button
             id="mobile-menu-btn"
+            aria-label="Open navigation menu"
             class="md:hidden border border-black p-2 rounded-full mr-2 justify-self-end"
           >
             <svg
@@ -74,7 +80,11 @@
     >
       <div class="flex justify-between items-center mb-8">
         <h2 class="text-2xl font-bold">Menu</h2>
-        <button id="mobile-menu-close-btn" class="p-2">
+        <button
+          id="mobile-menu-close-btn"
+          aria-label="Close navigation menu"
+          class="p-2"
+        >
           <svg
             class="w-8 h-8"
             fill="none"
@@ -264,6 +274,7 @@
 
           <button
             id="scroll-left-btn"
+            aria-label="Scroll gallery left"
             class="hidden md:flex items-center justify-center w-12 h-12 bg-gray-100/70 hover:bg-gray-100 rounded-full shadow-md absolute top-1/2 -translate-y-1/2 left-1 z-10"
           >
             <svg
@@ -284,6 +295,7 @@
 
           <button
             id="scroll-right-btn"
+            aria-label="Scroll gallery right"
             class="hidden md:flex items-center justify-center w-12 h-12 bg-gray-100/70 hover:bg-gray-100 rounded-full shadow-md absolute top-1/2 -translate-y-1/2 right-1 z-10"
           >
             <svg
@@ -344,6 +356,7 @@
       <div class="container mx-auto h-96 bg-gray-300 fade-in-up">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.7935452466722!2d15.978074576785133!3d45.79536371128124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d65e1197f029%3A0xb1694cc227225783!2sTrnjanska%20cesta%2069%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1762856494677!5m2!1sen!2shr"
+          title="Google Map showing the salon's location"
           class="w-full h-full"
           style="border: 0"
           allowfullscreen=""
