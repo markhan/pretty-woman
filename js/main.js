@@ -92,4 +92,115 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run it once on load
     animateOnScroll();
   }
+
+  // === 4. ANIMATED SERVICES SCRIPT (GSAP with matchMedia - FIXED) ===
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Use GSAP's matchMedia to create responsive animations
+  let mm = gsap.matchMedia();
+
+  // Add animations for different breakpoints
+  mm.add(
+    {
+      // === MEDIA QUERIES ===
+      isMobile: '(max-width: 767px)',
+      isDesktop: '(min-width: 768px)',
+    },
+    (context) => {
+      // --- THIS IS THE SETUP FUNCTION (runs when breakpoint is met) ---
+
+      let { isMobile, isDesktop } = context.conditions;
+
+      // We'll store all our triggers here for cleanup
+      let triggers = [];
+
+      if (isDesktop) {
+        // --- RUN DESKTOP LOGIC ---
+        const serviceItems = document.querySelectorAll(
+          '.desktop-services .service-item'
+        );
+
+        if (serviceItems.length > 0) {
+          const servicesTL = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.pin-wrapper',
+              pin: '.pin-element',
+              start: 'top top',
+              end: '+=2000',
+              scrub: 1,
+            },
+          });
+          triggers.push(servicesTL.scrollTrigger); // Save for cleanup
+
+          // Loop over each service item and add it to the timeline
+          serviceItems.forEach((item, index) => {
+            const description = item.querySelector('.service-description');
+
+            // Animate this item's description IN
+            servicesTL.to(description, {
+              maxHeight: '1000px', // Animate to a large height
+              opacity: 1,
+              duration: 1,
+            });
+
+            // If it's NOT the last item, animate it OUT
+            if (index < serviceItems.length - 1) {
+              servicesTL.to(
+                description,
+                {
+                  maxHeight: 0,
+                  opacity: 0,
+                  duration: 1,
+                },
+                '+=1'
+              ); // Wait 1 "second" on the timeline before shrinking
+            }
+          });
+        }
+      } else if (isMobile) {
+        // --- RUN MOBILE LOGIC ---
+        const serviceItems = document.querySelectorAll(
+          '.mobile-services .service-item'
+        );
+
+        if (serviceItems.length > 0) {
+          serviceItems.forEach((item) => {
+            const description = item.querySelector('.service-description');
+            const itemTL = gsap.timeline({
+              scrollTrigger: {
+                trigger: item,
+                pin: item,
+                start: 'top top',
+                end: '+=1000',
+                scrub: 1,
+              },
+            });
+            triggers.push(itemTL.scrollTrigger); // Save for cleanup
+
+            itemTL
+              .to(description, {
+                maxHeight: '1000px',
+                opacity: 1,
+                ease: 'power2.inOut',
+                duration: 1,
+              })
+              .to(description, { duration: 0.5 })
+              .to(description, {
+                maxHeight: 0,
+                opacity: 0,
+                ease: 'power2.inOut',
+                duration: 1,
+              });
+          });
+        }
+      }
+
+      // --- THIS IS THE CLEANUP FUNCTION ---
+      // It runs when the breakpoint is no longer matched
+      return () => {
+        triggers.forEach((trigger) => trigger.kill());
+      };
+    }
+  );
 });

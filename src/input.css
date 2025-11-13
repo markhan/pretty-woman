@@ -57,3 +57,9 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.service-description {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
