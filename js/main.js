@@ -1,4 +1,13 @@
-// js/main.js
+// === 1. REGISTER PLUGINS AND INITIALIZE SCROLLSMOOTHER ===
+// (This goes at the top, outside your DOMContentLoaded)
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollSmoother.create({
+  smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+  effects: true, // looks for data-speed and data-lag attributes on elements
+  smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   // === 1. MOBILE MENU SCRIPT (for all pages) ===
@@ -93,56 +102,97 @@ document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
   }
 
-  // === 4. ANIMATED SERVICES SCRIPT ===
+  // === ANIMATED SERVICES SCRIPT (GSAP with matchMedia) ===
 
-  gsap.registerPlugin(ScrollTrigger);
+  let mm = gsap.matchMedia();
 
-  // We only run the desktop (min-width: 768px) logic
-  gsap.matchMedia().add('(min-width: 768px)', () => {
-    // --- RUN DESKTOP LOGIC ---
-    const serviceItems = document.querySelectorAll(
-      '.desktop-services .service-item'
-    );
+  mm.add(
+    {
+      isMobile: '(max-width: 767px)',
+      isDesktop: '(min-width: 768px)',
+    },
+    (context) => {
+      let { isMobile, isDesktop } = context.conditions;
+      let triggers = [];
 
-    if (serviceItems.length > 0) {
-      const servicesTL = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.pin-wrapper',
-          pin: '.pin-element',
-          start: 'top top',
-          end: '+=2000',
-          scrub: 1.5,
-        },
-      });
+      if (isDesktop) {
+        // --- RUN DESKTOP LOGIC (Single Pin) ---
+        const serviceItems = document.querySelectorAll(
+          '.desktop-services .service-item'
+        );
 
-      // Loop over each service item and add it to the timeline
-      serviceItems.forEach((item, index) => {
-        const description = item.querySelector('.service-description');
-
-        // Animate this item's description IN
-        servicesTL.to(description, {
-          maxHeight: '1000px', // Animate to a large height
-          opacity: 1,
-          duration: 1,
-        });
-
-        // If it's NOT the last item, animate it OUT
-        if (index < serviceItems.length - 1) {
-          servicesTL.to(
-            description,
-            {
-              maxHeight: 0,
-              opacity: 0,
-              duration: 1,
+        if (serviceItems.length > 0) {
+          const servicesTL = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.pin-wrapper',
+              pin: '.pin-element',
+              start: 'top top',
+              end: '+=2000',
+              scrub: 1.5,
+              toggleClass: { targets: '.pin-element', className: 'is-pinned' }, // Fixes overlap
             },
-            '+=1'
-          ); // Wait 1 "second" on the timeline before shrinking
-        }
-      });
-    }
+          });
+          triggers.push(servicesTL.scrollTrigger);
 
-    return () => {
-      ScrollTrigger.killAll(); // Kills all triggers when resizing to mobile
-    };
-  });
+          serviceItems.forEach((item, index) => {
+            const description = item.querySelector('.service-description');
+
+            servicesTL.to(description, {
+              maxHeight: '1000px',
+              opacity: 1,
+              duration: 1,
+              ease: 'power2.inOut',
+            });
+
+            // Your "final take": only shrink if it's NOT the last item
+            if (index < serviceItems.length - 1) {
+              servicesTL.to(
+                description,
+                {
+                  maxHeight: 0,
+                  opacity: 0,
+                  duration: 1,
+                  ease: 'power2.inOut',
+                },
+                '+=1' // Wait 1 "second"
+              );
+            }
+          });
+        }
+      } else if (isMobile) {
+        // --- RUN MOBILE LOGIC (GSAP Stacking/Pinning from Example) ---
+
+        const panels = gsap.utils.toArray('.mobile-services .service-item');
+        const nextSection = document.getElementById('gallery');
+
+        if (panels.length > 0 && nextSection) {
+          // 2. Create the REAL pin triggers for each panel
+          panels.forEach((panel, i) => {
+            const isLastPanel = i === panels.length - 1;
+            let trigger = ScrollTrigger.create({
+              trigger: panel,
+
+              // If panel is shorter than viewport, pin top-to-top
+              // If panel is TALLER than viewport, pin bottom-to-bottom
+              start: () =>
+                panel.offsetHeight < window.innerHeight
+                  ? 'top top'
+                  : 'bottom bottom',
+
+              pin: true,
+              pinSpacing: false,
+              endTrigger: isLastPanel ? nextSection : undefined,
+              end: isLastPanel ? 'top 90%' : undefined,
+            });
+            triggers.push(trigger); // Save for cleanup
+          });
+        }
+      }
+
+      // --- CLEANUP FUNCTION ---
+      return () => {
+        triggers.forEach((trigger) => trigger.kill());
+      };
+    }
+  );
 });
