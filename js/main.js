@@ -3,10 +3,32 @@
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-ScrollSmoother.create({
+let smoother = ScrollSmoother.create({
   smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
   effects: true, // looks for data-speed and data-lag attributes on elements
   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+});
+
+// This selector finds all <a> tags that link to an anchor on the *current* page.
+// It will correctly ignore your links on services.html that point to index.html.
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+anchorLinks.forEach((link) => {
+  const href = link.getAttribute('href');
+
+  // Ignore "dummy" links that are just href="#"
+  if (href === '#') {
+    return;
+  }
+
+  link.addEventListener('click', (e) => {
+    // 1. Stop the browser's default "jump"
+    e.preventDefault();
+
+    // 2. Tell ScrollSmoother to animate to that section
+    //    (The 'true' is a shortcut for 'smooth: true')
+    smoother.scrollTo(href, true);
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
