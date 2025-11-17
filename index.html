@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <div id="hero-trigger" class="relative w-full h-screen">
+    <div id="hero-trigger" class="relative w-full h-screen cursor-pointer">
       <div
         class="hero-pin-content absolute inset-0 w-full h-full overflow-hidden"
       >
@@ -466,45 +466,73 @@
 
       let mm = gsap.matchMedia();
 
+      // === DESKTOP CONFIG ===
       mm.add('(min-width: 768px)', () => {
-        // === DESKTOP ANIMATION (Vertical Columns) ===
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: '#hero-trigger',
             start: 'top top',
-            end: '+=150%',
-            scrub: 1,
+            end: '+=100%', // Reduced from 150% to make it faster
+            scrub: 1, // Keep scrub for smoothness
             pin: true,
+
+            // --- THE MAGIC SAUCE ---
+            snap: {
+              snapTo: 1, // Always snap to the end (1 = 100% progress)
+              duration: { min: 0.5, max: 1 }, // Animation takes 0.5 to 1 second
+              ease: 'power1.inOut', // Smooth easing
+              delay: 0, // Start snapping immediately when they stop scrolling
+            },
+            // -----------------------
           },
         });
 
-        // Odd columns move UP
         tl.to('.shutter-odd', { yPercent: -100, ease: 'power1.inOut' }, 0);
-        // Even columns move DOWN
         tl.to('.shutter-even', { yPercent: 100, ease: 'power1.inOut' }, 0);
-
-        // Logo Fade
         tl.to('.logo-text', { opacity: 1, y: -10, duration: 0.5 }, 0.5);
       });
 
+      // === MOBILE CONFIG ===
       mm.add('(max-width: 767px)', () => {
-        // === MOBILE ANIMATION (Horizontal Strips) ===
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: '#hero-trigger',
             start: 'top top',
-            end: '+=150%',
+            end: '+=100%',
             scrub: 1,
             pin: true,
+
+            // --- SAME SNAP CONFIG ---
+            snap: {
+              snapTo: 1,
+              duration: { min: 0.5, max: 1 },
+              ease: 'power1.inOut',
+              delay: 0,
+            },
+            // ------------------------
           },
         });
 
-        // Odd strips move LEFT
         tl.to('.shutter-odd', { xPercent: -100, ease: 'power1.inOut' }, 0);
-        // Even strips move RIGHT
         tl.to('.shutter-even', { xPercent: 100, ease: 'power1.inOut' }, 0);
-
         tl.to('.logo-text', { opacity: 1, y: -10, duration: 0.5 }, 0.5);
+      });
+
+      // === CLICK / TAP TO OPEN ===
+      const heroSection = document.querySelector('#hero-trigger');
+
+      heroSection.addEventListener('click', () => {
+        // 1. Calculate where the animation ends.
+        // Since our ScrollTrigger 'end' is set to "+=100%" (one screen height),
+        // the target scroll position is exactly the window's height.
+        // Note: If you changed 'end' to "+=200%", you would use window.innerHeight * 2
+        const targetScrollPosition = window.innerHeight;
+
+        // 2. Tell Lenis to scroll there smoothly
+        lenis.scrollTo(targetScrollPosition, {
+          duration: 4, // Slower duration = more cinematic reveal
+          easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic ease-out for a smooth stop
+        });
       });
     </script>
   </body>
