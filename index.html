@@ -18,7 +18,7 @@
       <div
         class="hero-pin-content absolute inset-0 w-full h-full overflow-hidden"
       >
-        <div class="absolute inset-0 z-0 bg-white">
+        <div class="shutter-grid absolute inset-0 z-0 bg-black">
           <div class="absolute inset-0 flex items-center justify-center">
             <img
               src="./images/logo.svg"
@@ -43,9 +43,9 @@
           </div>
         </div>
 
-        <div class="absolute inset-0 z-10 flex flex-col md:flex-row">
+        <div class="absolute inset-0 z-10 flex flex-col md:flex-row gap-0.5">
           <div
-            class="shutter-odd relative h-1/4 w-full overflow-hidden md:h-full md:w-1/4"
+            class="shutter-odd relative flex-1 w-full overflow-hidden md:h-full"
           >
             <img
               src="./images/hero_1.webp"
@@ -55,7 +55,7 @@
           </div>
 
           <div
-            class="shutter-even relative h-1/4 w-full overflow-hidden md:h-full md:w-1/4"
+            class="shutter-even relative flex-1 w-full overflow-hidden md:h-full"
           >
             <img
               src="./images/hero_2.webp"
@@ -65,7 +65,7 @@
           </div>
 
           <div
-            class="shutter-odd relative h-1/4 w-full overflow-hidden md:h-full md:w-1/4"
+            class="shutter-odd relative flex-1 w-full overflow-hidden md:h-full"
           >
             <img
               src="./images/hero_3.webp"
@@ -75,7 +75,7 @@
           </div>
 
           <div
-            class="shutter-even relative h-1/4 w-full overflow-hidden md:h-full md:w-1/4"
+            class="shutter-even relative flex-1 w-full overflow-hidden md:h-full"
           >
             <img
               src="./images/hero_4.webp"
@@ -83,6 +83,29 @@
               alt=""
             />
           </div>
+        </div>
+
+        <div
+          class="gradient-overlay pointer-events-none absolute inset-0 z-15 bg-linear-to-b from-transparent via-transparent via-50% to-black"
+        ></div>
+
+        <div
+          class="scroll-hint-arrow pointer-events-none absolute bottom-2 md:bottom-6 left-0 z-20 w-full flex justify-center text-white animate-bounce"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="h-10 w-10 drop-shadow-md"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
         </div>
       </div>
     </div>
@@ -481,8 +504,19 @@
       // Desktop Animation
       mm.add('(min-width: 768px)', () => {
         heroTimeline = createHeroTimeline();
+        heroTimeline.to(
+          ['.scroll-hint-arrow', '.gradient-overlay'],
+          { opacity: 0, y: 20, duration: 0.2 },
+          0
+        );
+
         heroTimeline.to('.shutter-odd', { yPercent: -100, ease: 'none' }, 0);
         heroTimeline.to('.shutter-even', { yPercent: 100, ease: 'none' }, 0);
+        heroTimeline.to(
+          '.shutter-grid',
+          { backgroundColor: '#ffffff', ease: 'none' },
+          0
+        );
         heroTimeline.to(
           '.logo-text',
           { opacity: 1, y: -10, duration: 0.1 },
@@ -493,8 +527,19 @@
       // Mobile Animation
       mm.add('(max-width: 767px)', () => {
         heroTimeline = createHeroTimeline();
+        heroTimeline.to(
+          ['.scroll-hint-arrow', '.gradient-overlay'],
+          { opacity: 0, y: 20, duration: 0.2 },
+          0
+        );
+
         heroTimeline.to('.shutter-odd', { xPercent: -100, ease: 'none' }, 0);
         heroTimeline.to('.shutter-even', { xPercent: 100, ease: 'none' }, 0);
+        heroTimeline.to(
+          '.shutter-grid',
+          { backgroundColor: '#ffffff', ease: 'none' },
+          0
+        );
         heroTimeline.to(
           '.logo-text',
           { opacity: 1, y: -10, duration: 0.1 },
