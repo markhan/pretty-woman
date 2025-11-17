@@ -46,9 +46,9 @@
           </div>
         </div>
 
-        <div class="absolute inset-0 z-10 flex flex-col md:flex-row gap-0.5">
+        <div class="absolute inset-0 z-10 flex flex-col lg:flex-row gap-0.5">
           <div
-            class="shutter-odd relative flex-1 w-full overflow-hidden md:h-full"
+            class="shutter-odd relative flex-1 w-full overflow-hidden lg:h-full"
           >
             <img
               src="./images/hero_1.webp"
@@ -58,7 +58,7 @@
           </div>
 
           <div
-            class="shutter-even relative flex-1 w-full overflow-hidden md:h-full"
+            class="shutter-even relative flex-1 w-full overflow-hidden lg:h-full"
           >
             <img
               src="./images/hero_2.webp"
@@ -68,7 +68,7 @@
           </div>
 
           <div
-            class="shutter-odd relative flex-1 w-full overflow-hidden md:h-full"
+            class="shutter-odd relative flex-1 w-full overflow-hidden lg:h-full"
           >
             <img
               src="./images/hero_3.webp"
@@ -78,7 +78,7 @@
           </div>
 
           <div
-            class="shutter-even relative flex-1 w-full overflow-hidden md:h-full"
+            class="shutter-even relative flex-1 w-full overflow-hidden lg:h-full"
           >
             <img
               src="./images/hero_4.webp"
@@ -505,7 +505,7 @@
       };
 
       // Desktop Animation
-      mm.add('(min-width: 768px)', () => {
+      mm.add('(min-width: 1024px)', () => {
         heroTimeline = createHeroTimeline();
         heroTimeline.to(
           ['.scroll-hint-arrow', '.gradient-overlay'],
@@ -528,7 +528,7 @@
       });
 
       // Mobile Animation
-      mm.add('(max-width: 767px)', () => {
+      mm.add('(max-width: 1023px)', () => {
         heroTimeline = createHeroTimeline();
         heroTimeline.to(
           ['.scroll-hint-arrow', '.gradient-overlay'],
