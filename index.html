@@ -473,15 +473,13 @@
             trigger: '#hero-trigger',
             start: 'top top',
             end: '+=100%', // Reduced from 150% to make it faster
-            scrub: 1, // Keep scrub for smoothness
+            scrub: 0.1, // Keep scrub for smoothness
             pin: true,
 
-            // --- THE MAGIC SAUCE ---
             snap: {
               snapTo: 1, // Always snap to the end (1 = 100% progress)
               duration: { min: 0.5, max: 1 }, // Animation takes 0.5 to 1 second
               ease: 'power1.inOut', // Smooth easing
-              delay: 0, // Start snapping immediately when they stop scrolling
             },
             // -----------------------
           },
@@ -499,7 +497,7 @@
             trigger: '#hero-trigger',
             start: 'top top',
             end: '+=100%',
-            scrub: 1,
+            scrub: 0.1,
             pin: true,
 
             // --- SAME SNAP CONFIG ---
@@ -507,7 +505,6 @@
               snapTo: 1,
               duration: { min: 0.5, max: 1 },
               ease: 'power1.inOut',
-              delay: 0,
             },
             // ------------------------
           },
