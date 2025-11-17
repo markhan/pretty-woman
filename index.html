@@ -87,17 +87,30 @@
       </div>
     </div>
 
-    <section class="bg-gray-100 py-20">
+    <section id="about-section" class="bg-white py-24 relative z-20">
       <div class="mx-auto max-w-3xl px-6 text-center">
-        <h2 class="mb-6 text-gray-900 text-xl font-bold">Our Philosophy</h2>
+        <h2
+          class="fade-in-text mb-6 text-sm font-bold tracking-widest text-gray-400 uppercase opacity-0 translate-y-8"
+        >
+          Our Philosophy
+        </h2>
 
-        <blockquote class="mb-8 font-light text-gray-700">
+        <blockquote
+          class="fade-in-text mb-8 text-2xl font-light leading-relaxed text-gray-900 md:text-4xl opacity-0 translate-y-8 font-serif"
+        >
           "We believe that self-care is not a luxury, but a necessity. Our
           mission is to provide a tranquil escape where you can recharge,
           rejuvenate, and leave feeling confident."
         </blockquote>
 
-        <p class="text-gray-700">- Jane Doe, Founder</p>
+        <div class="fade-in-text opacity-0 translate-y-8">
+          <p class="font-semibold text-gray-900">— Jane Doe, Founder</p>
+          <img
+            src="./images/signature.png"
+            alt="Signature"
+            class="h-12 mx-auto mt-4 opacity-60"
+          />
+        </div>
       </div>
     </section>
 
@@ -547,6 +560,29 @@
           engageHero();
         }
       });
+
+      // === ABOUT US ANIMATION ===
+      // We don't need matchMedia here because it works the same on mobile/desktop
+
+      gsap.fromTo(
+        '.fade-in-text',
+        {
+          opacity: 0,
+          y: 30, // Start 30px lower
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2, // Animate items one after another (0.2s gap)
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '#about-section',
+            start: 'top 80%', // Start when the top of the section hits 80% of the viewport
+            toggleActions: 'play none none reverse', // Play on enter, reverse if they scroll back up
+          },
+        }
+      );
     </script>
   </body>
 </html>
