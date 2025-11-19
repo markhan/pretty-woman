@@ -49,7 +49,7 @@
             class="shutter-odd relative flex-1 w-full overflow-hidden lg:h-full"
           >
             <img
-              src="./images/hero_1.webp"
+              src="./images/hero/hero_1.webp"
               class="absolute inset-0 h-full w-full object-cover"
               alt="Salon Detail 1"
               fetchpriority="high"
@@ -61,7 +61,7 @@
             class="shutter-even relative flex-1 w-full overflow-hidden lg:h-full"
           >
             <img
-              src="./images/hero_2.webp"
+              src="./images/hero/hero_2.webp"
               class="absolute inset-0 h-full w-full object-cover"
               alt="Salon Detail 2"
               fetchpriority="high"
@@ -73,7 +73,7 @@
             class="shutter-odd relative flex-1 w-full overflow-hidden lg:h-full"
           >
             <img
-              src="./images/hero_3.webp"
+              src="./images/hero/hero_3.webp"
               class="absolute inset-0 h-full w-full object-cover"
               alt="Salon Detail 3"
               fetchpriority="high"
@@ -85,7 +85,7 @@
             class="shutter-even relative flex-1 w-full overflow-hidden lg:h-full"
           >
             <img
-              src="./images/hero_4.webp"
+              src="./images/hero/hero_4.webp"
               class="absolute inset-0 h-full w-full object-cover"
               alt="Salon Detail 4"
               fetchpriority="high"
@@ -164,7 +164,13 @@
                 class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-gray-200 md:-top-8 md:-right-8"
               ></div>
               <img
-                src="./images/founder.webp"
+                srcset="
+                  ./images/about/founder-sm.webp  600w,
+                  ./images/about/founder-lg.webp 1080w
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+                src="./images/about/founder-lg.webp"
+                loading="lazy"
                 alt="Jane Doe, Founder"
                 class="relative h-72 w-full rounded-lg object-cover shadow-xl md:h-[400px]"
               />
@@ -200,8 +206,14 @@
               ></div>
 
               <img
-                src="./images/manicure.webp"
+                srcset="
+                  ./images/services/manicure-sm.webp  600w,
+                  ./images/services/manicure-lg.webp 1000w
+                "
+                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                src="./images/services/manicure-lg.webp"
                 alt="Classic Manicure"
+                loading="lazy"
                 class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
               />
             </div>
@@ -226,8 +238,14 @@
               ></div>
 
               <img
-                src="./images/pedicure.webp"
+                srcset="
+                  ./images/services/pedicure-sm.webp  600w,
+                  ./images/services/pedicure-lg.webp 1080w
+                "
+                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                src="./images/services/pedicure-lg.webp"
                 alt="Gel Pedicure"
+                loading="lazy"
                 class="relative h-64 w-full rounded-lg object-cover object-bottom shadow-lg md:h-80"
               />
             </div>
@@ -252,8 +270,14 @@
               ></div>
 
               <img
-                src="./images/nail_art.webp"
+                srcset="
+                  ./images/services/nail_art-sm.webp 600w,
+                  ./images/services/nail_art-lg.webp 734w
+                "
+                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                src="./images/services/nail_art-lg.webp"
                 alt="Nail Art"
+                loading="lazy"
                 class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
               />
             </div>
@@ -305,7 +329,7 @@
                 loop
                 muted
                 playsinline
-                poster="./images/education-poster.webp"
+                poster="./images/education/education-poster-lg.webp"
               >
                 <source src="./video/education.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -350,96 +374,288 @@
     </section>
 
     <section class="bg-gray-100 py-24 md:py-40">
-  <div class="mx-auto max-w-6xl px-6">
-    
-    <div class="mb-12 md:mb-16 flex flex-col items-center text-center">
-      <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-4">
-        Follow Our Work
-      </h2>
-      <a 
-        href="https://www.instagram.com/prettywomanbyjo/" 
-        target="_blank" 
-        class="font-sans text-sm font-semibold tracking-widest uppercase text-gray-500 hover:text-black transition"
-      >
-        @prettywomanbyjo
-      </a>
-    </div>
-
-    <div class="columns-2 gap-4 space-y-4 md:columns-3 lg:gap-8 lg:space-y-8">
-
-      <a href="https://www.instagram.com/p/DQU8mNOiAA9/" target="_blank" class="group relative block overflow-hidden rounded-lg break-inside-avoid">
-        <img src="./images/gallery_1.webp" alt="Nail Art 1" class="h-auto w-full transition duration-700 group-hover:scale-105" />
-        
-        <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100">
-          <div class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            View
-          </div>
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="mb-12 md:mb-16 flex flex-col items-center text-center">
+          <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-4">
+            Follow Our Work
+          </h2>
+          <a
+            href="https://www.instagram.com/prettywomanbyjo/"
+            target="_blank"
+            class="font-sans text-sm font-semibold tracking-widest uppercase text-gray-500 hover:text-black transition"
+          >
+            @prettywomanbyjo
+          </a>
         </div>
-      </a>
 
-      <a href="https://www.instagram.com/p/DPZqwo_CMZ8/" target="_blank" class="group relative block overflow-hidden rounded-lg break-inside-avoid">
-        <img src="./images/gallery_2.webp" alt="Nail Art 2" class="h-auto w-full transition duration-700 group-hover:scale-105" />
-        <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100">
-          <div class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            View
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.instagram.com/p/DNI2UXYsb3Q/" target="_blank" class="group relative block overflow-hidden rounded-lg break-inside-avoid">
-        <img src="./images/gallery_3.webp" alt="Nail Art 3" class="h-auto w-full transition duration-700 group-hover:scale-105" />
-        <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100">
-          <div class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            View
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.instagram.com/p/DKzc4YSMM7L/" target="_blank" class="group relative block overflow-hidden rounded-lg break-inside-avoid">
-        <img src="./images/gallery_4.webp" alt="Nail Art 4" class="h-auto w-full transition duration-700 group-hover:scale-105" />
-        <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100">
-           <div class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            View
-          </div>
-        </div>
-      </a>
-      
-       <a href="https://www.instagram.com/p/DHOP8V9sr71/" target="_blank" class="group relative block overflow-hidden rounded-lg break-inside-avoid">
-        <img src="./images/gallery_5.webp" alt="Nail Art 5" class="h-auto w-full transition duration-700 group-hover:scale-105" />
-        <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100">
-           <div class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            View
-          </div>
-        </div>
-      </a>
-      
-       <a href="https://www.instagram.com/p/DGfqWplMmgz/" target="_blank" class="group relative block overflow-hidden rounded-lg break-inside-avoid">
-        <img src="./images/gallery_6.webp" alt="Nail Art 6" class="h-auto w-full transition duration-700 group-hover:scale-105" />
-        <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100">
-           <div class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            View
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-      <div class="mt-12 text-center">
-        <a
-          href="https://www.instagram.com/prettywomanbyjo/"
-          target="_blank"
-          class="font-sans rounded-lg bg-gray-300 px-8 py-4 font-semibold text-gray-900 hover:bg-gray-400 transition"
+        <div
+          class="columns-2 gap-4 space-y-4 md:columns-3 lg:gap-8 lg:space-y-8"
         >
-          @prettywomanbyjo on Instagram
-        </a>
+          <a
+            href="https://www.instagram.com/p/DO348E2CATB/"
+            target="_blank"
+            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+          >
+            <img
+              srcset="
+                ./images/gallery/gallery-1-sm.webp  600w,
+                ./images/gallery/gallery-1-lg.webp 1200w
+              "
+              sizes="(max-width: 768px) 256px, 320px"
+              src="./images/gallery/gallery_1-lg.webp"
+              alt="Red gel manicure with gold flakes"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+            >
+              <div
+                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                View
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/p/DNI2UXYsb3Q/"
+            target="_blank"
+            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+          >
+            <img
+              srcset="
+                ./images/gallery/gallery-2-sm.webp  600w,
+                ./images/gallery/gallery-2-lg.webp 1200w
+              "
+              sizes="(max-width: 768px) 256px, 320px"
+              src="./images/gallery/gallery_2-lg.webp"
+              alt="Red gel manicure with gold flakes"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+            >
+              <div
+                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                View
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/p/DOizi0vCO3Y/"
+            target="_blank"
+            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+          >
+            <img
+              srcset="
+                ./images/gallery/gallery-3-sm.webp  600w,
+                ./images/gallery/gallery-3-lg.webp 1200w
+              "
+              sizes="(max-width: 768px) 256px, 320px"
+              src="./images/gallery/gallery_3-lg.webp"
+              alt="Red gel manicure with gold flakes"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+            >
+              <div
+                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                View
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/p/CxL6o0AM405/"
+            target="_blank"
+            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+          >
+            <img
+              srcset="
+                ./images/gallery/gallery-4-sm.webp  600w,
+                ./images/gallery/gallery-4-lg.webp 1200w
+              "
+              sizes="(max-width: 768px) 256px, 320px"
+              src="./images/gallery/gallery_4-lg.webp"
+              alt="Red gel manicure with gold flakes"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+            >
+              <div
+                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                View
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/p/CojtvERM4aR/"
+            target="_blank"
+            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+          >
+            <img
+              srcset="
+                ./images/gallery/gallery-5-sm.webp  600w,
+                ./images/gallery/gallery-5-lg.webp 1200w
+              "
+              sizes="(max-width: 768px) 256px, 320px"
+              src="./images/gallery/gallery_5-lg.webp"
+              alt="Red gel manicure with gold flakes"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+            >
+              <div
+                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                View
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/p/DQ-K4aoiGYF/"
+            target="_blank"
+            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+          >
+            <img
+              srcset="
+                ./images/gallery/gallery-6-sm.webp  600w,
+                ./images/gallery/gallery-6-lg.webp 1200w
+              "
+              sizes="(max-width: 768px) 256px, 320px"
+              src="./images/gallery/gallery_6-lg.webp"
+              alt="Red gel manicure with gold flakes"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+            >
+              <div
+                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                View
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -457,8 +673,14 @@
               class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-gray-200 md:-top-6 md:-left-6"
             ></div>
             <img
-              src="./images/miss7_1.webp"
-              alt="Miss7 Article Feature"
+              srcset="
+                ./images/testimonials/miss7_1-sm.webp  600w,
+                ./images/testimonials/miss7_1-lg.webp 1200w
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+              src="./images/testimonials/miss7_1-lg.webp"
+              alt="Miss7 Article Feature - Salon Interior"
+              loading="lazy"
               class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
             />
           </div>
@@ -499,8 +721,14 @@
               class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-gray-200 md:-top-6 md:-left-6"
             ></div>
             <img
-              src="./images/miss7_2.webp"
-              alt="Miss7 Article Feature 2"
+              srcset="
+                ./images/testimonials/miss7_2-sm.webp  600w,
+                ./images/testimonials/miss7_2-lg.webp 1200w
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+              src="./images/testimonials/miss7_2-lg.webp"
+              alt="Miss7 Article Feature - Manicure Details"
+              loading="lazy"
               class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
             />
           </div>
