@@ -35,7 +35,9 @@
           <div
             class="absolute bottom-0 left-0 w-full pb-12 text-center md:pb-8"
           >
-            <p class="mt-2 text-sm text-gray-500 opacity-0 logo-text">
+            <p
+              class="font-sans mt-2 text-sm font-light tracking-widest opacity-0 logo-text uppercase"
+            >
               Scroll to explore
               <span class="block text-lg">↓</span>
             </p>
@@ -124,23 +126,33 @@
 
     <section id="about-section" class="px-6 bg-white py-24 md:py-40 z-20">
       <div class="mx-auto max-w-3xl text-center">
-        <h2 class="fade-in-text mb-6 opacity-0">Our Philosophy</h2>
+        <h2
+          class="font-sans fade-in-text mb-8 text-xs font-bold tracking-[0.2em] text-gray-400 uppercase opacity-0"
+        >
+          Our Philosophy
+        </h2>
 
-        <blockquote class="fade-in-text mb-8 opacity-0">
+        <blockquote
+          class="font-serif fade-in-text mb-10 text-3xl md:text-5xl italic leading-tight text-gray-900 opacity-0"
+        >
           "We believe that self-care is not a luxury, but a necessity. Our
           mission is to provide a tranquil escape where you can recharge,
           rejuvenate, and leave feeling confident."
         </blockquote>
 
         <div class="fade-in-text opacity-0">
-          <p class=>— Jane Doe, Founder</p>
+          <p class="font-sans font-semibold text-gray-900">
+            — Jane Doe, Founder
+          </p>
         </div>
       </div>
     </section>
 
     <section class="bg-white py-24 md:py-40">
       <div class="mx-auto max-w-6xl px-6">
-        <h2 class="mb-12 md:mb-16 text-center ">
+        <h2
+          class="font-serif mb-12 text-center text-5xl md:text-7xl text-gray-900 md:mb-16"
+        >
           Our Services
         </h2>
 
@@ -155,10 +167,12 @@
             />
 
             <div class="p-6">
-              <h3>
+              <h3 class="font-sans mb-2 text-xl font-semibold text-gray-900">
                 Classic Manicure
               </h3>
-              <p>
+              <p
+                class="font-sans mb-4 text-sm font-light leading-relaxed text-gray-600"
+              >
                 A relaxing treatment for your hands, including shaping, cuticle
                 care, and polish.
               </p>
@@ -174,10 +188,12 @@
               class="h-48 w-full object-cover object-bottom"
             />
             <div class="p-6">
-              <h3>
+              <h3 class="font-sans mb-2 text-xl font-semibold text-gray-900">
                 Gel Pedicure
               </h3>
-              <p>
+              <p
+                class="font-sans mb-4 text-sm font-light leading-relaxed text-gray-600"
+              >
                 Long-lasting gel polish combined with a luxurious foot soak and
                 massage.
               </p>
@@ -193,8 +209,12 @@
               class="h-48 w-full object-cover"
             />
             <div class="p-6">
-              <h3>Nail Art</h3>
-              <p >
+              <h3 class="font-sans mb-2 text-xl font-semibold text-gray-900">
+                Nail Art
+              </h3>
+              <p
+                class="font-sans mb-4 text-sm font-light leading-relaxed text-gray-600"
+              >
                 Smooth skin starts here. We offer eyebrow, leg, and bikini
                 waxing.
               </p>
@@ -204,8 +224,85 @@
       </div>
     </section>
 
+    <section class="bg-gray-900 py-24 md:py-40 text-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div
+          class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-x-16 md:items-center"
+        >
+          <div class="md:col-start-1 md:row-start-1 md:self-end">
+            <p
+              class="font-sans mb-6 text-xs font-bold tracking-[0.2em] text-gray-400 uppercase"
+            >
+              Academy & Workshops
+            </p>
+            <h2
+              class="font-serif text-4xl md:text-6xl leading-tight text-white"
+            >
+              Master the Art <br />
+              <span class="italic text-gray-500">of Nail Design</span>
+            </h2>
+          </div>
+
+          <div class="md:col-start-2 md:row-start-1 md:row-span-2">
+            <div class="relative">
+              <div
+                class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-gray-700 md:-top-8 md:-right-8"
+              ></div>
+
+              <video
+                class="relative h-64 w-full rounded-lg object-cover shadow-2xl transition duration-700 md:h-[500px]"
+                autoplay
+                loop
+                muted
+                playsinline
+                poster="./images/education-poster.webp"
+              >
+                <source src="./video/education.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <div class="md:col-start-1 md:row-start-2 md:self-start">
+            <p
+              class="font-sans mb-8 text-lg font-light leading-relaxed text-gray-300"
+            >
+              Elevate your skills with our exclusive education program. Whether
+              you are a beginner looking to start a career or a seasoned
+              professional wanting to perfect your technique, our hands-on
+              workshops are designed for you.
+            </p>
+
+            <ul class="font-sans mb-10 space-y-4 text-gray-300 font-light">
+              <li class="flex items-center">
+                <span class="mr-4 h-px w-8 bg-white opacity-50"></span>
+                One-on-One Mentorship
+              </li>
+              <li class="flex items-center">
+                <span class="mr-4 h-px w-8 bg-white opacity-50"></span>
+                Advanced Gel & Polygel Techniques
+              </li>
+              <li class="flex items-center">
+                <span class="mr-4 h-px w-8 bg-white opacity-50"></span>
+                Certification Upon Completion
+              </li>
+            </ul>
+
+            <a
+              href="#"
+              class="font-sans inline-block rounded-lg bg-white px-8 py-4 font-semibold text-gray-900 hover:bg-gray-200 transition"
+            >
+              Apply for Academy
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-gray-100 py-24 md:py-40">
-      <h2 class="mb-12 md:mb-16 px-6 text-center">
+      <h2
+        class="font-serif mb-12 px-6 text-center text-5xl md:text-6xl text-gray-900 md:mb-16"
+      >
         Follow Our Work
       </h2>
 
@@ -292,8 +389,9 @@
       </div>
       <div class="mt-10 text-center">
         <a
-          href="#"
-          class="rounded-lg  bg-gray-300 px-6 py-3"
+          href="https://www.instagram.com/prettywomanbyjo/"
+          target="_blank"
+          class="font-sans rounded-lg bg-gray-300 px-6 py-3 font-semibold text-gray-900 hover:bg-gray-400 transition"
         >
           @prettywomanbyjo on Instagram
         </a>
@@ -302,7 +400,9 @@
 
     <section class="bg-white py-24 md:py-40">
       <div class="mx-auto max-w-6xl px-6">
-        <h2 class="mb-12 md:mb-16 text-center">
+        <h2
+          class="font-serif mb-12 text-center text-5xl md:text-6xl text-gray-900 md:mb-16"
+        >
           Hear From Our Clients
         </h2>
 
@@ -313,11 +413,18 @@
             class="w-full object-cover shadow-md md:w-1/2 shrink-0"
           />
           <div class="p-8 md:p-12">
-            <h3>
+            <p
+              class="font-sans mb-3 text-xs font-bold tracking-[0.2em] text-gray-400 uppercase"
+            >
+              As Seen In
+            </p>
+            <h3
+              class="font-serif mb-4 text-2xl md:text-3xl font-semibold leading-tight text-gray-900"
+            >
               Miss7: Zagrebački salon za manikuru i pedikuru osvojio nas je i
               posebnim uređenjem
             </h3>
-            <blockquote >
+            <blockquote class="font-serif mb-6 text-lg italic text-gray-700">
               "Svaka žena želi biti lijepa na svoj način, a u Pretty Woman by
               Jo, vrhunskim uslugama manikure i pedikure to se vrlo lako može
               postići..."
@@ -326,6 +433,7 @@
               href="https://miss7.24sata.hr/beauty/pretty-woman-by-jo-zagrebacki-salon-za-manikuru-i-pedikuru-osvojio-nas-je-i-posebnim-uredenjem-43363"
               target="_blank"
               rel="noopener noreferrer"
+              class="font-sans font-semibold text-gray-900 hover:underline"
             >
               Read the full article &rarr;
             </a>
@@ -339,11 +447,18 @@
             class="w-full object-covershadow-md md:w-1/2 shrink-0"
           />
           <div class="p-8 md:p-12">
-            <h3>
+            <p
+              class="font-sans mb-3 text-xs font-bold tracking-[0.2em] text-gray-400 uppercase"
+            >
+              As Seen In
+            </p>
+            <h3
+              class="font-serif mb-4 text-2xl md:text-3xl font-semibold leading-tight text-gray-900"
+            >
               Miss7: Isprobala sam manikuru o kojoj svi pričaju, evo mojih
               dojmova
             </h3>
-            <blockquote>
+            <blockquote class="font-serif mb-6 text-lg italic text-gray-700">
               "Za vrijeme tretmana opustila sam se uz šalicu izvrsnog voćnog
               čaja, a vlasnica salona, Josipa Martinović, oduševila me svojom
               ljubaznošću, toplinom i opuštenom atmosferom..."
@@ -352,6 +467,7 @@
               href="https://miss7.24sata.hr/beauty/isprobala-sam-manikuru-o-kojoj-svi-pricaju-evo-mojih-dojmova-43542"
               target="_blank"
               rel="noopener noreferrer"
+              class="font-sans font-semibold text-gray-900 hover:underline"
             >
               Read the full article &rarr;
             </a>
@@ -360,27 +476,33 @@
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div class="rounded-lg bg-gray-100 p-8">
-            <p >
+            <p
+              class="font-sans mb-4 text-sm font-light leading-relaxed text-gray-600"
+            >
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. The
               staff was so friendly and my nails have never looked better!"
             </p>
-            <p>- Sarah J.</p>
+            <p class="font-sans font-semibold text-gray-900">- Sarah J.</p>
           </div>
 
           <div class="rounded-lg bg-gray-100 p-8">
-            <p>
+            <p
+              class="font-sans mb-4 text-sm font-light leading-relaxed text-gray-600"
+            >
               "Absolutely love this place! I showed them a picture from
               Instagram and they recreated it perfectly."
             </p>
-            <p >- Maria K.</p>
+            <p class="font-sans font-semibold text-gray-900">- Maria K.</p>
           </div>
 
           <div class="rounded-lg bg-gray-100 p-8">
-            <p>
+            <p
+              class="font-sans mb-4 text-sm font-light leading-relaxed text-gray-600"
+            >
               "The best pedicure I've ever had. So relaxing and professional.
               I'll definitely be back!"
             </p>
-            <p>- Emily R.</p>
+            <p class="font-sans font-semibold text-gray-900">- Emily R.</p>
           </div>
         </div>
       </div>
@@ -401,38 +523,54 @@
       </div>
 
       <div class="w-full bg-gray-100 p-8 md:w-1/2 md:p-16">
-        <h2 >Visit Us</h2>
+        <h2 class="font-serif mb-8 text-4xl md:text-5xl text-gray-900">
+          Visit Us
+        </h2>
 
-        <div class="mb-8 space-y-4">
+        <div class="mb-8 space-y-4 font-sans text-gray-600 font-light">
           <p>
-            <strong>Address:</strong> Trnjanska cesta 69, Zagreb<br />
-            <strong>Phone:</strong> (555) 123-4567<br />
-            <strong>Hours:</strong> Mon-Fri: 9am - 6pm
+            <strong class="font-semibold text-gray-900">Address:</strong>
+            Trnjanska cesta 69, Zagreb<br />
+            <strong class="font-semibold text-gray-900">Phone:</strong> (555)
+            123-4567<br />
+            <strong class="font-semibold text-gray-900">Hours:</strong> Mon-Fri:
+            9am - 6pm
           </p>
         </div>
 
-        <form action="#" class="space-y-6">
+        <form action="#" class="space-y-6 font-sans">
           <div>
-            <label for="name2" class="block ">Name</label>
-            <div class="mt-2 h-12 w-full rounded-md bg-white"></div>
+            <label for="name2" class="block text-sm font-medium text-gray-700"
+              >Name</label
+            >
+            <div
+              class="mt-2 h-12 w-full rounded-md bg-white border border-gray-200"
+            ></div>
           </div>
           <div>
-            <label for="email2" class="block"
+            <label for="email2" class="block text-sm font-medium text-gray-700"
               >Email</label
             >
-            <div class="mt-2 h-12 w-full rounded-md bg-white"></div>
+            <div
+              class="mt-2 h-12 w-full rounded-md bg-white border border-gray-200"
+            ></div>
           </div>
           <div>
-            <label for="message2" class="block"
+            <label
+              for="message2"
+              class="block text-sm font-medium text-gray-700"
               >Message</label
             >
-            <div class="mt-2 h-32 w-full rounded-md bg-white"></div>
+            <div
+              class="mt-2 h-32 w-full rounded-md bg-white border border-gray-200"
+            ></div>
           </div>
           <div>
             <div
-              class="h-12 w-full rounded-lg bg-gray-300 px-6 py-3 md:w-auto"
+              class="h-12 w-full rounded-lg bg-gray-300 px-6 py-3 md:w-auto hover:bg-gray-400 transition cursor-pointer"
             >
-              <span class="flex items-center justify-center h-full"
+              <span
+                class="flex items-center justify-center h-full font-semibold text-gray-900"
                 >Send Message</span
               >
             </div>
@@ -441,27 +579,31 @@
       </div>
     </section>
 
-    <footer class="bg-gray-900 py-24 text-gray-400">
+    <footer
+      class="bg-gray-900 py-20 md:py-24 text-gray-400 pb-[env(safe-area-inset-bottom)]"
+    >
       <div class="mx-auto max-w-6xl px-6">
         <div class="md:grid md:grid-cols-2 md:items-center md:gap-12">
           <div class="mb-6 text-center md:mb-0 md:text-left">
-            <p>
+            <p class="font-serif mb-4 text-2xl text-white">
               Follow Us on Instagram
             </p>
-            <p>
+            <p class="font-sans mb-6 text-sm font-light">
               See our latest designs, client selfies, and special offers.
             </p>
             <a
               href="https://www.instagram.com/prettywomanbyjo/"
               target="_blank"
               rel="noopener noreferrer"
-              >@prettywomanbyjo</a
+              class="font-sans font-semibold text-white hover:underline"
             >
+              @prettywomanbyjo
+            </a>
           </div>
 
           <div class="text-center md:text-left">
-            <p class="mb-4">Our Salon</p>
-            <div class="space-y-2">
+            <p class="font-serif mb-4 text-xl text-white">Our Salon</p>
+            <div class="space-y-2 font-sans text-sm font-light">
               <p>Trnjanska cesta 69, Zagreb</p>
               <p>(555) 123-4567</p>
               <p>hello@yoursalon.com</p>
@@ -470,8 +612,8 @@
         </div>
 
         <div class="mt-12 border-t border-gray-800 pt-8 text-center">
-          <p>
-            &copy; 2025 PrettyWoman by Jo. All rights reserved.
+          <p class="font-sans text-xs text-gray-500">
+            © 2025 PrettyWoman by Jo. All rights reserved.
           </p>
         </div>
       </div>
