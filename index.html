@@ -19,100 +19,58 @@
   </head>
 
   <body>
-    <div id="hero-trigger" class="relative w-full h-dvh cursor-pointer">
+    <div id="hero-trigger" class="relative h-[150vh]">
       <div
-        class="hero-pin-content absolute inset-0 w-full h-full overflow-hidden"
+        class="sticky top-0 h-dvh w-full overflow-hidden bg-black flex items-center justify-center"
       >
-        <div class="shutter-grid absolute inset-0 z-0 bg-black">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <img
-              src="./images/logo.svg"
-              alt="Pretty Woman by Jo Logo"
-              class="h-32 w-auto object-contain md:h-48"
-            />
-          </div>
+        <div
+          id="hero-image-wrapper"
+          class="relative z-0 w-[85%] h-[60%] md:w-[70%] md:h-[80%] overflow-hidden shadow-2xl"
+        >
+          <img
+            src="./images/hero/hero_master.webp"
+            alt="Pretty Woman Salon"
+            class="h-full w-full object-cover scale-110"
+            id="hero-image-inner"
+            fetchpriority="high"
+            loading="eager"
+          />
 
-          <div
-            class="absolute bottom-0 left-0 w-full pb-12 text-center md:pb-8"
-          >
-            <p
-              class="font-sans mt-2 text-sm font-light tracking-widest opacity-0 logo-text uppercase"
-            >
-              Scroll to explore
-              <span class="block text-lg">↓</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="absolute inset-0 z-10 flex flex-col lg:flex-row gap-0.5">
-          <div
-            class="shutter-odd relative flex-1 w-full overflow-hidden lg:h-full"
-          >
-            <img
-              src="./images/hero/hero_1.webp"
-              class="absolute inset-0 h-full w-full object-cover"
-              alt="Salon Detail 1"
-              fetchpriority="high"
-              loading="eager"
-            />
-          </div>
-
-          <div
-            class="shutter-even relative flex-1 w-full overflow-hidden lg:h-full"
-          >
-            <img
-              src="./images/hero/hero_2.webp"
-              class="absolute inset-0 h-full w-full object-cover"
-              alt="Salon Detail 2"
-              fetchpriority="high"
-              loading="eager"
-            />
-          </div>
-
-          <div
-            class="shutter-odd relative flex-1 w-full overflow-hidden lg:h-full"
-          >
-            <img
-              src="./images/hero/hero_3.webp"
-              class="absolute inset-0 h-full w-full object-cover"
-              alt="Salon Detail 3"
-              fetchpriority="high"
-              loading="eager"
-            />
-          </div>
-
-          <div
-            class="shutter-even relative flex-1 w-full overflow-hidden lg:h-full"
-          >
-            <img
-              src="./images/hero/hero_4.webp"
-              class="absolute inset-0 h-full w-full object-cover"
-              alt="Salon Detail 4"
-              fetchpriority="high"
-              loading="eager"
-            />
-          </div>
+          <div id="hero-overlay" class="absolute inset-0 bg-black/30"></div>
         </div>
 
         <div
-          class="gradient-overlay pointer-events-none absolute inset-0 z-15 bg-linear-to-b from-transparent via-transparent via-50% to-black"
-        ></div>
+          class="absolute z-10 flex flex-col items-center text-center text-white"
+        >
+          <img
+            src="./images/logo.svg"
+            alt="Logo"
+            class="mb-6 h-24 w-auto object-contain drop-shadow-lg md:h-32"
+          />
+
+          <h1
+            class="font-sans mt-4 text-xs md:text-sm font-light tracking-[0.3em] uppercase opacity-90"
+          >
+            Experience the Art of Beauty
+          </h1>
+        </div>
 
         <div
-          class="scroll-hint-arrow pointer-events-none absolute bottom-2 md:bottom-6 left-0 z-20 w-full flex flex-col items-center justify-center text-white animate-bounce"
+          id="scroll-hint"
+          class="absolute bottom-8 left-0 z-20 w-full flex flex-col items-center justify-center text-white animate-bounce"
         >
           <span
-            class="mb-2 md:text-xl font-light tracking-[0.2em] uppercase opacity-90"
+            class="font-sans mb-2 text-xs font-light tracking-[0.2em] uppercase opacity-80"
           >
-            Welcome
+            Scroll
           </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="2"
+            stroke-width="1.5"
             stroke="currentColor"
-            class="h-10 w-10 drop-shadow-md"
+            class="h-6 w-6"
           >
             <path
               stroke-linecap="round"
@@ -925,115 +883,61 @@
 
         gsap.registerPlugin(ScrollTrigger);
 
-        let heroTimeline;
-        let mm = gsap.matchMedia();
-
-        const createHeroTimeline = () => {
-          return gsap.timeline({
-            scrollTrigger: {
-              trigger: '#hero-trigger',
-              start: 'top top',
-              end: '+=100%',
-              scrub: true,
-              pin: true,
-              invalidateOnRefresh: true,
-            },
-          });
-        };
-
-        // Desktop Animation
-        mm.add('(min-width: 1024px)', () => {
-          heroTimeline = createHeroTimeline();
-          heroTimeline.to(
-            ['.scroll-hint-arrow', '.gradient-overlay'],
-            { opacity: 0, y: 20, duration: 0.2 },
-            0
-          );
-
-          heroTimeline.to('.shutter-odd', { yPercent: -100, ease: 'none' }, 0);
-          heroTimeline.to('.shutter-even', { yPercent: 100, ease: 'none' }, 0);
-          heroTimeline.to(
-            '.shutter-grid',
-            { backgroundColor: '#ffffff', ease: 'none' },
-            0
-          );
-          heroTimeline.to(
-            '.logo-text',
-            { opacity: 1, y: -10, duration: 0.1 },
-            0.4
-          );
-        });
-
-        // Mobile Animation
-        mm.add('(max-width: 1023px)', () => {
-          heroTimeline = createHeroTimeline();
-          heroTimeline.to(
-            ['.scroll-hint-arrow', '.gradient-overlay'],
-            { opacity: 0, y: 20, duration: 0.2 },
-            0
-          );
-
-          heroTimeline.to('.shutter-odd', { xPercent: -100, ease: 'none' }, 0);
-          heroTimeline.to('.shutter-even', { xPercent: 100, ease: 'none' }, 0);
-          heroTimeline.to(
-            '.shutter-grid',
-            { backgroundColor: '#ffffff', ease: 'none' },
-            0
-          );
-          heroTimeline.to(
-            '.logo-text',
-            { opacity: 1, y: -10, duration: 0.1 },
-            0.4
-          );
-        });
-
-        let isAnimating = false;
-        let hasFinished = false;
-
-        // Check if page loaded past the hero
-        if (window.scrollY > 100) hasFinished = true;
-
-        function engageHero() {
-          if (isAnimating || hasFinished) return;
-          isAnimating = true;
-
-          const targetScroll = heroTimeline.scrollTrigger.end + 5;
-
-          lenis.scrollTo(targetScroll, {
-            duration: 1.5,
-            easing: (t) => 1 - Math.pow(1 - t, 3),
-            lock: true,
-            onComplete: () => {
-              isAnimating = false;
-              hasFinished = true;
-              scrollObserver.disable();
-              ScrollTrigger.refresh();
-            },
-          });
-        }
-
-        // TRIGGER A: Watch for Scroll Intent using ScrollTrigger.observe()
-        const scrollObserver = ScrollTrigger.observe({
-          target: window,
-          type: 'wheel,touch',
-          preventDefault: true,
-
-          // Invert wheel so "Wheel Down" acts like "Touch Drag Up"
-          wheelSpeed: -1,
-
-          // onUp handles: Finger Drag UP (Touch) & Wheel Spin DOWN (Mouse)
-          onUp: () => {
-            if (!hasFinished) engageHero();
+        // === THE EXPANDING HERO ANIMATION ===
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#hero-trigger',
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: true,
           },
         });
 
-        // TRIGGER B: Click
-        const heroSection = document.querySelector('#hero-trigger');
-        heroSection.addEventListener('click', () => {
-          if (!hasFinished) engageHero();
-        });
+        // A. Expand the Wrapper to Full Screen
+        tl.to(
+          '#hero-image-wrapper',
+          {
+            width: '100%',
+            height: '100%',
+            borderRadius: 0, // Remove rounded corners if you added any
+            ease: 'none',
+          },
+          0
+        );
 
-        // === 5. ABOUT US FADE ===
+        // B. Subtle Reverse Zoom on the Image (Parallax feel)
+        // The wrapper grows, but the image inside shrinks slightly to create depth
+        tl.to(
+          '#hero-image-inner',
+          {
+            scale: 1,
+            ease: 'none',
+          },
+          0
+        );
+
+        // C. Fade Out Overlay (Image becomes brighter as it expands)
+        tl.to(
+          '#hero-overlay',
+          {
+            opacity: 0,
+            ease: 'none',
+          },
+          0
+        );
+
+        // D. Fade Out Scroll Hint
+        tl.to(
+          '#scroll-hint',
+          {
+            opacity: 0,
+            y: 50,
+            duration: 0.3,
+          },
+          0
+        );
+
+        // === ABOUT US FADE (Keep existing) ===
         gsap.fromTo(
           '.fade-in-text',
           { opacity: 0, y: 30 },
