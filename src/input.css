@@ -53,6 +53,31 @@
 @theme {
   --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
+
+  /* 1. The Deep Note (Deep Midnight Teal) */
+  /* Used for: Headings, Footer Background, Education Section */
+  --color-brand-dark: #0f2532;
+
+  /* 2. The Body Note (Muted Slate) */
+  /* Used for: Paragraph text */
+  --color-brand-primary: #465e69;
+
+  /* 3. The Accent (Rose Gold) */
+  /* Used for: Small Labels, Frames, Borders, Italic highlights */
+  --color-brand-gold: #d1a89d;
+
+  /* 4. The Background (Cool Mist) */
+  /* Used for: Gallery BG, Contact BG */
+  --color-brand-light: #f3f6f8;
+}
+
+/* === 3. GLOBAL DEFAULTS === */
+body {
+  /* Force black background to prevent white flashes during hero scroll on mobile */
+  background-color: black;
+  /* Improve font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Hides scrollbar for WebKit (Chrome, Safari, Edge) */
