@@ -1285,52 +1285,52 @@
             },
           }
         );
-      });
 
-      // === PRICE LIST MODAL LOGIC ===
-      const modal = document.getElementById('pricelist-modal');
-      const openBtn = document.getElementById('open-pricelist');
-      const closeBtn = document.getElementById('close-pricelist');
-      const backdrop = document.getElementById('pricelist-backdrop');
-      const card = document.getElementById('pricelist-card');
+        // === PRICE LIST MODAL LOGIC ===
+        const modal = document.getElementById('pricelist-modal');
+        const openBtn = document.getElementById('open-pricelist');
+        const closeBtn = document.getElementById('close-pricelist');
+        const backdrop = document.getElementById('pricelist-backdrop');
+        const card = document.getElementById('pricelist-card');
 
-      // Open
-      openBtn.addEventListener('click', () => {
-        // 1. Make visible
-        gsap.set(modal, { autoAlpha: 1 }); // autoAlpha handles opacity + visibility
+        // Open
+        openBtn.addEventListener('click', () => {
+          // 1. Make visible
+          gsap.set(modal, { autoAlpha: 1 }); // autoAlpha handles opacity + visibility
 
-        // 2. Animate Backdrop
-        gsap.fromTo(backdrop, { opacity: 0 }, { opacity: 1, duration: 0.4 });
+          // 2. Animate Backdrop
+          gsap.fromTo(backdrop, { opacity: 0 }, { opacity: 1, duration: 0.4 });
 
-        // 3. Animate Card (Scale Up + Fade In)
-        gsap.fromTo(
-          card,
-          { scale: 0.95, opacity: 0, y: 20 },
-          { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.7)' }
-        );
+          // 3. Animate Card (Scale Up + Fade In)
+          gsap.fromTo(
+            card,
+            { scale: 0.95, opacity: 0, y: 20 },
+            { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.7)' }
+          );
 
-        // 4. Stop Body Scroll (Use Lenis if active, otherwise CSS)
-        lenis.stop();
-      });
-
-      // Close Function
-      const closeMenu = () => {
-        // Animate Out
-        gsap.to(backdrop, { opacity: 0, duration: 0.3 });
-        gsap.to(card, {
-          scale: 0.95,
-          opacity: 0,
-          y: 20,
-          duration: 0.3,
-          onComplete: () => {
-            gsap.set(modal, { autoAlpha: 0 }); // Hide after animation
-            lenis.start(); // Resume scroll
-          },
+          // 4. Stop Body Scroll (Use Lenis if active, otherwise CSS)
+          lenis.stop();
         });
-      };
 
-      closeBtn.addEventListener('click', closeMenu);
-      backdrop.addEventListener('click', closeMenu); // Close when clicking outside
+        // Close Function
+        const closeMenu = () => {
+          // Animate Out
+          gsap.to(backdrop, { opacity: 0, duration: 0.3 });
+          gsap.to(card, {
+            scale: 0.95,
+            opacity: 0,
+            y: 20,
+            duration: 0.3,
+            onComplete: () => {
+              gsap.set(modal, { autoAlpha: 0 }); // Hide after animation
+              lenis.start(); // Resume scroll
+            },
+          });
+        };
+
+        closeBtn.addEventListener('click', closeMenu);
+        backdrop.addEventListener('click', closeMenu); // Close when clicking outside
+      });
     </script>
   </body>
 </html>
