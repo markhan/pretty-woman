@@ -35,249 +35,51 @@
   </head>
 
   <body>
-    <div id="hero-trigger" class="relative h-[150vh]">
-      <div
-        class="sticky top-0 h-dvh w-full overflow-hidden bg-brand-dark/40 flex items-center justify-center"
-      >
+    <main>
+      <div id="hero-trigger" class="relative h-[150vh]">
         <div
-          id="hero-image-wrapper"
-          class="relative z-0 w-[85%] h-[60%] md:w-[70%] md:h-[80%] overflow-hidden shadow-2xl rounded-xl"
+          class="sticky top-0 h-dvh w-full overflow-hidden bg-brand-dark/40 flex items-center justify-center"
         >
-          <img
-            src="./images/hero/hero_master.webp"
-            alt="Pretty Woman Salon"
-            class="h-full w-full object-cover scale-110"
-            id="hero-image-inner"
-            fetchpriority="high"
-            loading="eager"
-          />
-
-          <div id="hero-overlay" class="absolute inset-0 bg-black/30"></div>
-        </div>
-
-        <div
-          class="absolute z-10 flex flex-col items-center text-center text-white"
-        >
-          <img
-            src="./images/logo.svg"
-            alt="Logo"
-            class="mb-6 h-24 w-auto object-contain drop-shadow-lg md:h-32"
-          />
-
-          <h1
-            class="font-sans mt-4 text-xs md:text-sm font-light tracking-[0.3em] uppercase opacity-90"
+          <div
+            id="hero-image-wrapper"
+            class="relative z-0 w-[85%] h-[60%] md:w-[70%] md:h-[80%] overflow-hidden shadow-2xl rounded-xl"
           >
-            Experience the Art of Beauty
-          </h1>
-        </div>
-
-        <div
-          id="scroll-hint"
-          class="absolute bottom-8 left-0 z-20 w-full flex flex-col items-center justify-center text-white animate-bounce"
-        >
-          <span
-            class="font-sans mb-2 text-xs font-light tracking-[0.2em] uppercase opacity-80"
-          >
-            Welcome
-          </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="h-6 w-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            <img
+              src="./images/hero/hero_master.webp"
+              alt="Pretty Woman Salon"
+              class="h-full w-full object-cover scale-110"
+              id="hero-image-inner"
+              fetchpriority="high"
+              loading="eager"
             />
-          </svg>
-        </div>
-      </div>
-    </div>
 
-    <section
-      id="about-section"
-      class="bg-white py-24 md:py-32 z-20 overflow-hidden"
-    >
-      <div class="mx-auto max-w-6xl px-6">
-        <div
-          class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-x-16 md:items-center"
-        >
-          <div class="order-1 md:col-start-1 md:row-start-1">
-            <h2
-              class="font-sans fade-in-text mb-6 text-xs font-bold tracking-[0.2em] text-brand-gold uppercase opacity-0"
+            <div id="hero-overlay" class="absolute inset-0 bg-black/30"></div>
+          </div>
+
+          <div
+            class="absolute z-10 flex flex-col items-center text-center text-white"
+          >
+            <img
+              src="./images/logo.svg"
+              alt="Logo"
+              class="mb-6 h-24 w-auto object-contain drop-shadow-lg md:h-32"
+            />
+
+            <h1
+              class="font-sans mt-4 text-xs md:text-sm font-light tracking-[0.3em] uppercase opacity-90"
             >
-              Our Philosophy
-            </h2>
-
-            <blockquote
-              class="font-serif fade-in-text mb-8 text-3xl md:text-4xl italic leading-tight text-brand-dark opacity-0"
-            >
-              "We believe that self-care is not a luxury, but a necessity. Our
-              mission is to provide a tranquil escape where you can recharge."
-            </blockquote>
-
-            <div
-              class="fade-in-text opacity-0 font-sans font-light text-brand-primary text-lg leading-relaxed"
-            >
-              <p>
-                Founded in the heart of Zagreb, Pretty Woman by Jo was created
-                to redefine the salon experience. We combine medical-grade
-                hygiene with high-fashion artistry to ensure every client leaves
-                feeling confident.
-              </p>
-            </div>
+              Experience the Art of Beauty
+            </h1>
           </div>
 
-          <div class="order-2 md:col-start-2 md:row-start-1 md:row-span-2">
-            <div class="fade-in-text relative opacity-0">
-              <div
-                class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-brand-gold/50 md:-top-8 md:-right-8"
-              ></div>
-              <img
-                srcset="
-                  ./images/about/founder-sm.webp  600w,
-                  ./images/about/founder-lg.webp 1080w
-                "
-                sizes="(max-width: 768px) 100vw, 50vw"
-                src="./images/about/founder-lg.webp"
-                loading="lazy"
-                alt="Josipa Martinović, Founder"
-                class="relative h-72 w-full rounded-lg object-cover shadow-xl md:h-[400px]"
-              />
-            </div>
-          </div>
-
-          <div class="order-3 md:col-start-1 md:row-start-2 md:self-start">
-            <div class="fade-in-text opacity-0 pt-2 md:pt-0">
-              <p class="font-sans font-semibold text-brand-dark text-base">
-                — Josipa Martinović, Founder
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white py-24 md:py-40">
-      <div class="mx-auto max-w-6xl px-6">
-        <h2
-          class="font-serif mb-12 text-center text-4xl md:text-5xl text-brand-dark md:mb-16"
-        >
-          Our Services
-        </h2>
-
-        <div
-          class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-16"
-        >
-          <div class="group text-center">
-            <div class="relative mb-8 mx-2">
-              <div
-                class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-brand-gold/30 transition-transform duration-500 group-hover:-translate-y-2 group-hover:translate-x-2"
-              ></div>
-
-              <img
-                srcset="
-                  ./images/services/manicure-sm.webp  600w,
-                  ./images/services/manicure-lg.webp 1000w
-                "
-                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
-                src="./images/services/manicure-lg.webp"
-                alt="Classic Manicure"
-                loading="lazy"
-                class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
-              />
-            </div>
-
-            <div class="px-2">
-              <h3 class="font-sans mb-3 text-xl font-semibold text-brand-dark">
-                Classic Manicure
-              </h3>
-              <p
-                class="font-sans text-sm font-light leading-relaxed text-brand-primary"
-              >
-                A relaxing treatment for your hands, including shaping, cuticle
-                care, and polish.
-              </p>
-            </div>
-          </div>
-
-          <div class="group text-center">
-            <div class="relative mb-8 mx-2">
-              <div
-                class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-brand-gold/30 transition-transform duration-500 group-hover:-translate-y-2 group-hover:-translate-x-2"
-              ></div>
-
-              <img
-                srcset="
-                  ./images/services/pedicure-sm.webp  600w,
-                  ./images/services/pedicure-lg.webp 1080w
-                "
-                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
-                src="./images/services/pedicure-lg.webp"
-                alt="Gel Pedicure"
-                loading="lazy"
-                class="relative h-64 w-full rounded-lg object-cover object-bottom shadow-lg md:h-80"
-              />
-            </div>
-
-            <div class="px-2">
-              <h3 class="font-sans mb-3 text-xl font-semibold text-brand-dark">
-                Gel Pedicure
-              </h3>
-              <p
-                class="font-sans text-sm font-light leading-relaxed text-brand-primary"
-              >
-                Long-lasting gel polish combined with a luxurious foot soak and
-                massage.
-              </p>
-            </div>
-          </div>
-
-          <div class="group text-center">
-            <div class="relative mb-8 mx-2">
-              <div
-                class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-brand-gold/30 transition-transform duration-500 group-hover:-translate-y-2 group-hover:translate-x-2"
-              ></div>
-
-              <img
-                srcset="
-                  ./images/services/nail_art-sm.webp 600w,
-                  ./images/services/nail_art-lg.webp 734w
-                "
-                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
-                src="./images/services/nail_art-lg.webp"
-                alt="Nail Art"
-                loading="lazy"
-                class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
-              />
-            </div>
-
-            <div class="px-2">
-              <h3 class="font-sans mb-3 text-xl font-semibold text-brand-dark">
-                Nail Art
-              </h3>
-              <p
-                class="font-sans text-sm font-light leading-relaxed text-brand-primary"
-              >
-                Custom designs, geometric patterns, and detailed artistry for
-                your nails.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="mt-16 text-center">
-          <button
-            id="open-pricelist"
-            class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-brand-dark px-8 py-3 transition duration-300 hover:bg-brand-dark"
+          <div
+            id="scroll-hint"
+            class="absolute bottom-8 left-0 z-20 w-full flex flex-col items-center justify-center text-white animate-bounce"
           >
             <span
-              class="font-sans text-sm font-semibold tracking-widest uppercase text-brand-dark transition duration-300 group-hover:text-white"
+              class="font-sans mb-2 text-xs font-light tracking-[0.2em] uppercase opacity-80"
             >
-              View Full Price List
+              Welcome
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -285,791 +87,1040 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="h-4 w-4 text-brand-dark transition duration-300 group-hover:text-white"
+              class="h-6 w-6"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
               />
             </svg>
-          </button>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="bg-brand-dark py-24 md:py-40 text-white">
-      <div class="mx-auto max-w-6xl px-6">
-        <div
-          class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-x-16 md:items-center"
-        >
-          <div class="md:col-start-1 md:row-start-1 md:self-end">
-            <p
-              class="font-sans mb-6 text-xs font-bold tracking-[0.2em] text-brand-gold uppercase"
-            >
-              Academy & Workshops
-            </p>
-            <h2
-              class="font-serif text-4xl md:text-6xl leading-tight text-white"
-            >
-              Master the Art <br />
-              <span class="italic text-brand-gold">of Nail Design</span>
-            </h2>
-          </div>
-
-          <div class="md:col-start-2 md:row-start-1 md:row-span-2">
-            <div class="relative">
-              <div
-                class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-brand-primary md:-top-8 md:-right-8"
-              ></div>
-
-              <video
-                class="relative h-64 w-full rounded-lg object-cover shadow-2xl transition duration-700 md:h-[500px]"
-                autoplay
-                loop
-                muted
-                playsinline
-                poster="./images/education/education-poster-lg.webp"
+      <section
+        id="about-section"
+        class="bg-white py-24 md:py-32 z-20 overflow-hidden"
+      >
+        <div class="mx-auto max-w-6xl px-6">
+          <div
+            class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-x-16 md:items-center"
+          >
+            <div class="order-1 md:col-start-1 md:row-start-1">
+              <h2
+                class="font-sans fade-in-text mb-6 text-xs font-bold tracking-[0.2em] text-brand-gold uppercase opacity-0"
               >
-                <source src="./video/education.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+                Our Philosophy
+              </h2>
+
+              <blockquote
+                class="font-serif fade-in-text mb-8 text-3xl md:text-4xl italic leading-tight text-brand-dark opacity-0"
+              >
+                "We believe that self-care is not a luxury, but a necessity. Our
+                mission is to provide a tranquil escape where you can recharge."
+              </blockquote>
+
+              <div
+                class="fade-in-text opacity-0 font-sans font-light text-brand-primary text-lg leading-relaxed"
+              >
+                <p>
+                  Founded in the heart of Zagreb, Pretty Woman by Jo was created
+                  to redefine the salon experience. We combine medical-grade
+                  hygiene with high-fashion artistry to ensure every client
+                  leaves feeling confident.
+                </p>
+              </div>
+            </div>
+
+            <div class="order-2 md:col-start-2 md:row-start-1 md:row-span-2">
+              <div class="fade-in-text relative opacity-0">
+                <div
+                  class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-brand-gold/50 md:-top-8 md:-right-8"
+                ></div>
+                <img
+                  srcset="
+                    ./images/about/founder-sm.webp  600w,
+                    ./images/about/founder-lg.webp 1080w
+                  "
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  src="./images/about/founder-lg.webp"
+                  loading="lazy"
+                  alt="Josipa Martinović, Founder"
+                  class="relative h-72 w-full rounded-lg object-cover shadow-xl md:h-[400px]"
+                />
+              </div>
+            </div>
+
+            <div class="order-3 md:col-start-1 md:row-start-2 md:self-start">
+              <div class="fade-in-text opacity-0 pt-2 md:pt-0">
+                <p class="font-sans font-semibold text-brand-dark text-base">
+                  — Josipa Martinović, Founder
+                </p>
+              </div>
             </div>
           </div>
-
-          <div class="md:col-start-1 md:row-start-2 md:self-start">
-            <p
-              class="font-sans mb-8 text-lg font-light leading-relaxed text-gray-300"
-            >
-              Elevate your skills with our exclusive education program. Whether
-              you are a beginner looking to start a career or a seasoned
-              professional wanting to perfect your technique, our hands-on
-              workshops are designed for you.
-            </p>
-
-            <ul class="font-sans mb-10 space-y-4 text-gray-300 font-light">
-              <li class="flex items-center">
-                <span class="mr-4 h-px w-8 bg-white opacity-50"></span>
-                One-on-One Mentorship
-              </li>
-              <li class="flex items-center">
-                <span class="mr-4 h-px w-8 bg-white opacity-50"></span>
-                Advanced Gel & Polygel Techniques
-              </li>
-              <li class="flex items-center">
-                <span class="mr-4 h-px w-8 bg-white opacity-50"></span>
-                Certification Upon Completion
-              </li>
-            </ul>
-
-            <a
-              href="#"
-              class="font-sans inline-block rounded-lg bg-white px-8 py-4 font-semibold text-brand-dark hover:bg-gray-200 transition"
-            >
-              Apply for Academy
-            </a>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="bg-brand-light py-24 md:py-40">
-      <div class="mx-auto max-w-6xl px-6">
-        <div class="mb-12 md:mb-16 flex flex-col items-center text-center">
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-4">
-            Follow Our Work
+      <section class="bg-white py-24 md:py-40">
+        <div class="mx-auto max-w-6xl px-6">
+          <h2
+            class="font-serif mb-12 text-center text-4xl md:text-5xl text-brand-dark md:mb-16"
+          >
+            Our Services
           </h2>
-          <a
-            href="https://www.instagram.com/prettywomanbyjo/"
-            target="_blank"
-            class="font-sans text-sm font-semibold tracking-widest uppercase text-brand-gold hover:text-black transition"
-          >
-            @prettywomanbyjo
-          </a>
-        </div>
-
-        <div
-          class="columns-2 gap-4 space-y-4 md:columns-3 lg:gap-8 lg:space-y-8"
-        >
-          <a
-            href="https://www.instagram.com/p/DO348E2CATB/"
-            target="_blank"
-            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
-          >
-            <img
-              srcset="
-                ./images/gallery/gallery-1-sm.webp  600w,
-                ./images/gallery/gallery-1-lg.webp 1200w
-              "
-              sizes="(max-width: 768px) 256px, 320px"
-              src="./images/gallery/gallery_1-lg.webp"
-              alt="Red gel manicure with gold flakes"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-
-            <div
-              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
-            >
-              <div
-                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                  ></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                View
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://www.instagram.com/p/DNI2UXYsb3Q/"
-            target="_blank"
-            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
-          >
-            <img
-              srcset="
-                ./images/gallery/gallery-2-sm.webp  600w,
-                ./images/gallery/gallery-2-lg.webp 1200w
-              "
-              sizes="(max-width: 768px) 256px, 320px"
-              src="./images/gallery/gallery_2-lg.webp"
-              alt="Red gel manicure with gold flakes"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
-            >
-              <div
-                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                  ></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                View
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://www.instagram.com/p/DOizi0vCO3Y/"
-            target="_blank"
-            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
-          >
-            <img
-              srcset="
-                ./images/gallery/gallery-3-sm.webp  600w,
-                ./images/gallery/gallery-3-lg.webp 1200w
-              "
-              sizes="(max-width: 768px) 256px, 320px"
-              src="./images/gallery/gallery_3-lg.webp"
-              alt="Red gel manicure with gold flakes"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
-            >
-              <div
-                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                  ></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                View
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://www.instagram.com/p/CxL6o0AM405/"
-            target="_blank"
-            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
-          >
-            <img
-              srcset="
-                ./images/gallery/gallery-4-sm.webp  600w,
-                ./images/gallery/gallery-4-lg.webp 1200w
-              "
-              sizes="(max-width: 768px) 256px, 320px"
-              src="./images/gallery/gallery_4-lg.webp"
-              alt="Red gel manicure with gold flakes"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
-            >
-              <div
-                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                  ></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                View
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://www.instagram.com/p/CojtvERM4aR/"
-            target="_blank"
-            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
-          >
-            <img
-              srcset="
-                ./images/gallery/gallery-5-sm.webp  600w,
-                ./images/gallery/gallery-5-lg.webp 1200w
-              "
-              sizes="(max-width: 768px) 256px, 320px"
-              src="./images/gallery/gallery_5-lg.webp"
-              alt="Red gel manicure with gold flakes"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
-            >
-              <div
-                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                  ></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                View
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://www.instagram.com/p/DQ-K4aoiGYF/"
-            target="_blank"
-            class="group relative block overflow-hidden rounded-lg break-inside-avoid"
-          >
-            <img
-              srcset="
-                ./images/gallery/gallery-6-sm.webp  600w,
-                ./images/gallery/gallery-6-lg.webp 1200w
-              "
-              sizes="(max-width: 768px) 256px, 320px"
-              src="./images/gallery/gallery_6-lg.webp"
-              alt="Red gel manicure with gold flakes"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
-            >
-              <div
-                class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                  ></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                View
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-brand-light py-24 md:py-40">
-      <div class="mx-auto max-w-6xl px-6">
-        <h2
-          class="font-serif mb-12 text-center text-4xl md:text-5xl text-brand-dark md:mb-16"
-        >
-          Hear From Our Clients
-        </h2>
-
-        <div class="mb-24 md:flex md:gap-16 md:items-center">
-          <div class="relative mb-12 md:mb-0 md:w-1/2">
-            <div
-              class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-brand-gold/50 md:-top-6 md:-left-6"
-            ></div>
-            <img
-              srcset="
-                ./images/testimonials/miss7_1-sm.webp  600w,
-                ./images/testimonials/miss7_1-lg.webp 1200w
-              "
-              sizes="(max-width: 768px) 100vw, 50vw"
-              src="./images/testimonials/miss7_1-lg.webp"
-              alt="Miss7 Article Feature - Salon Interior"
-              loading="lazy"
-              class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
-            />
-          </div>
-
-          <div class="md:w-1/2">
-            <p
-              class="font-sans mb-4 text-xs font-bold tracking-[0.2em] text-brand-gold uppercase"
-            >
-              As Seen In
-            </p>
-            <h3
-              class="font-serif mb-6 text-2xl md:text-3xl font-semibold leading-tight text-brand-dark"
-            >
-              Miss7: Zagrebački salon za manikuru i pedikuru osvojio nas je i
-              posebnim uređenjem
-            </h3>
-            <blockquote
-              class="font-serif mb-6 text-lg italic text-brand-primary leading-relaxed"
-            >
-              "Svaka žena želi biti lijepa na svoj način, a u Pretty Woman by
-              Jo, vrhunskim uslugama manikure i pedikure to se vrlo lako može
-              postići..."
-            </blockquote>
-            <a
-              href="https://miss7.24sata.hr/beauty/pretty-woman-by-jo-zagrebacki-salon-za-manikuru-i-pedikuru-osvojio-nas-je-i-posebnim-uredenjem-43363"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="font-sans font-semibold text-brand-dark hover:underline"
-            >
-              Read the full article →
-            </a>
-          </div>
-        </div>
-
-        <div class="mb-24 md:flex md:gap-16 md:items-center">
-          <div class="relative mb-12 md:mb-0 md:w-1/2">
-            <div
-              class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-brand-gold/50 md:-top-6 md:-left-6"
-            ></div>
-            <img
-              srcset="
-                ./images/testimonials/miss7_2-sm.webp  600w,
-                ./images/testimonials/miss7_2-lg.webp 1200w
-              "
-              sizes="(max-width: 768px) 100vw, 50vw"
-              src="./images/testimonials/miss7_2-lg.webp"
-              alt="Miss7 Article Feature - Manicure Details"
-              loading="lazy"
-              class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
-            />
-          </div>
-
-          <div class="md:w-1/2">
-            <p
-              class="font-sans mb-4 text-xs font-bold tracking-[0.2em] text-brand-gold uppercase"
-            >
-              As Seen In
-            </p>
-            <h3
-              class="font-serif mb-6 text-2xl md:text-3xl font-semibold leading-tight text-brand-dark"
-            >
-              Miss7: Isprobala sam manikuru o kojoj svi pričaju, evo mojih
-              dojmova
-            </h3>
-            <blockquote
-              class="font-serif mb-6 text-lg italic text-brand-primary leading-relaxed"
-            >
-              "Za vrijeme tretmana opustila sam se uz šalicu izvrsnog voćnog
-              čaja, a vlasnica salona, Josipa Martinović, oduševila me svojom
-              ljubaznošću, toplinom i opuštenom atmosferom..."
-            </blockquote>
-            <a
-              href="https://miss7.24sata.hr/beauty/isprobala-sam-manikuru-o-kojoj-svi-pricaju-evo-mojih-dojmova-43542"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="font-sans font-semibold text-brand-dark hover:underline"
-            >
-              Read the full article →
-            </a>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div
-            class="rounded-lg bg-gray-50 p-8 border border-brand-light shadow-sm"
-          >
-            <p
-              class="font-sans mb-6 text-sm font-light leading-relaxed text-brand-primary"
-            >
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. The
-              staff was so friendly and my nails have never looked better!"
-            </p>
-            <p class="font-sans font-semibold text-brand-dark">- Sarah J.</p>
-          </div>
 
           <div
-            class="rounded-lg bg-gray-50 p-8 border border-brand-light shadow-sm"
+            class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-16"
           >
-            <p
-              class="font-sans mb-6 text-sm font-light leading-relaxed text-brand-primary"
-            >
-              "Absolutely love this place! I showed them a picture from
-              Instagram and they recreated it perfectly."
-            </p>
-            <p class="font-sans font-semibold text-brand-dark">- Maria K.</p>
-          </div>
+            <div class="group text-center">
+              <div class="relative mb-8 mx-2">
+                <div
+                  class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-brand-gold/30 transition-transform duration-500 group-hover:-translate-y-2 group-hover:translate-x-2"
+                ></div>
 
-          <div
-            class="rounded-lg bg-gray-50 p-8 border border-brand-light shadow-sm"
-          >
-            <p
-              class="font-sans mb-6 text-sm font-light leading-relaxed text-brand-primary"
-            >
-              "The best pedicure I've ever had. So relaxing and professional.
-              I'll definitely be back!"
-            </p>
-            <p class="font-sans font-semibold text-brand-dark">- Emily R.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+                <img
+                  srcset="
+                    ./images/services/manicure-sm.webp  600w,
+                    ./images/services/manicure-lg.webp 1000w
+                  "
+                  sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                  src="./images/services/manicure-lg.webp"
+                  alt="Classic Manicure"
+                  loading="lazy"
+                  class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
+                />
+              </div>
 
-    <section class="py-24 md:py-32 bg-white">
-      <div class="mx-auto max-w-6xl px-6">
-        <div class="flex flex-col-reverse gap-16 md:flex-row md:items-start">
-          <div class="relative w-full md:w-1/2 h-[400px] md:h-[500px]">
-            <div
-              class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-gray-200 md:-top-8 md:-left-8"
-            ></div>
-            <div
-              class="relative h-full w-full overflow-hidden rounded-lg shadow-xl bg-gray-200"
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.7935452466713!2d15.978074576785135!3d45.795363711281254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d65e1197f029%3A0xb1694cc227225783!2sTrnjanska%20cesta%2069%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1763306674216!5m2!1sen!2shr"
-                width="100%"
-                height="100%"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
+              <div class="px-2">
+                <h3
+                  class="font-sans mb-3 text-xl font-semibold text-brand-dark"
+                >
+                  Classic Manicure
+                </h3>
+                <p
+                  class="font-sans text-sm font-light leading-relaxed text-brand-primary"
+                >
+                  A relaxing treatment for your hands, including shaping,
+                  cuticle care, and polish.
+                </p>
+              </div>
+            </div>
+
+            <div class="group text-center">
+              <div class="relative mb-8 mx-2">
+                <div
+                  class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-brand-gold/30 transition-transform duration-500 group-hover:-translate-y-2 group-hover:-translate-x-2"
+                ></div>
+
+                <img
+                  srcset="
+                    ./images/services/pedicure-sm.webp  600w,
+                    ./images/services/pedicure-lg.webp 1080w
+                  "
+                  sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                  src="./images/services/pedicure-lg.webp"
+                  alt="Gel Pedicure"
+                  loading="lazy"
+                  class="relative h-64 w-full rounded-lg object-cover object-bottom shadow-lg md:h-80"
+                />
+              </div>
+
+              <div class="px-2">
+                <h3
+                  class="font-sans mb-3 text-xl font-semibold text-brand-dark"
+                >
+                  Gel Pedicure
+                </h3>
+                <p
+                  class="font-sans text-sm font-light leading-relaxed text-brand-primary"
+                >
+                  Long-lasting gel polish combined with a luxurious foot soak
+                  and massage.
+                </p>
+              </div>
+            </div>
+
+            <div class="group text-center">
+              <div class="relative mb-8 mx-2">
+                <div
+                  class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-brand-gold/30 transition-transform duration-500 group-hover:-translate-y-2 group-hover:translate-x-2"
+                ></div>
+
+                <img
+                  srcset="
+                    ./images/services/nail_art-sm.webp 600w,
+                    ./images/services/nail_art-lg.webp 734w
+                  "
+                  sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                  src="./images/services/nail_art-lg.webp"
+                  alt="Nail Art"
+                  loading="lazy"
+                  class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
+                />
+              </div>
+
+              <div class="px-2">
+                <h3
+                  class="font-sans mb-3 text-xl font-semibold text-brand-dark"
+                >
+                  Nail Art
+                </h3>
+                <p
+                  class="font-sans text-sm font-light leading-relaxed text-brand-primary"
+                >
+                  Custom designs, geometric patterns, and detailed artistry for
+                  your nails.
+                </p>
+              </div>
             </div>
           </div>
+          <div class="mt-16 text-center">
+            <button
+              id="open-pricelist"
+              class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-brand-dark px-8 py-3 transition duration-300 hover:bg-brand-dark"
+            >
+              <span
+                class="font-sans text-sm font-semibold tracking-widest uppercase text-brand-dark transition duration-300 group-hover:text-white"
+              >
+                View Full Price List
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-4 w-4 text-brand-dark transition duration-300 group-hover:text-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
 
-          <div class="w-full md:w-1/2">
-            <h2 class="font-serif mb-8 text-4xl md:text-5xl text-brand-dark">
-              Visit Us
+      <section class="bg-brand-dark py-24 md:py-40 text-white">
+        <div class="mx-auto max-w-6xl px-6">
+          <div
+            class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-x-16 md:items-center"
+          >
+            <div class="md:col-start-1 md:row-start-1 md:self-end">
+              <p
+                class="font-sans mb-6 text-xs font-bold tracking-[0.2em] text-brand-gold uppercase"
+              >
+                Academy & Workshops
+              </p>
+              <h2
+                class="font-serif text-4xl md:text-6xl leading-tight text-white"
+              >
+                Master the Art <br />
+                <span class="italic text-brand-gold">of Nail Design</span>
+              </h2>
+            </div>
+
+            <div class="md:col-start-2 md:row-start-1 md:row-span-2">
+              <div class="relative">
+                <div
+                  class="absolute -top-4 -right-4 h-full w-full rounded-lg border border-brand-primary md:-top-8 md:-right-8"
+                ></div>
+
+                <video
+                  class="relative h-64 w-full rounded-lg object-cover shadow-2xl transition duration-700 md:h-[500px]"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  poster="./images/education/education-poster-lg.webp"
+                >
+                  <source src="./video/education.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <div class="md:col-start-1 md:row-start-2 md:self-start">
+              <p
+                class="font-sans mb-8 text-lg font-light leading-relaxed text-gray-300"
+              >
+                Elevate your skills with our exclusive education program.
+                Whether you are a beginner looking to start a career or a
+                seasoned professional wanting to perfect your technique, our
+                hands-on workshops are designed for you.
+              </p>
+
+              <ul class="font-sans mb-10 space-y-4 text-gray-300 font-light">
+                <li class="flex items-center">
+                  <span class="mr-4 h-px w-8 bg-white opacity-50"></span>
+                  One-on-One Mentorship
+                </li>
+                <li class="flex items-center">
+                  <span class="mr-4 h-px w-8 bg-white opacity-50"></span>
+                  Advanced Gel & Polygel Techniques
+                </li>
+                <li class="flex items-center">
+                  <span class="mr-4 h-px w-8 bg-white opacity-50"></span>
+                  Certification Upon Completion
+                </li>
+              </ul>
+
+              <a
+                href="#"
+                class="font-sans inline-block rounded-lg bg-white px-8 py-4 font-semibold text-brand-dark hover:bg-gray-200 transition"
+              >
+                Apply for Academy
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-brand-light py-24 md:py-40">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="mb-12 md:mb-16 flex flex-col items-center text-center">
+            <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-4">
+              Follow Our Work
             </h2>
-
-            <div
-              class="mb-10 space-y-2 font-sans text-brand-primary font-light text-lg"
+            <a
+              href="https://www.instagram.com/prettywomanbyjo/"
+              target="_blank"
+              class="font-sans text-sm font-semibold tracking-widest uppercase text-brand-primary hover:text-black transition"
             >
-              <p>Trnjanska cesta 69, Zagreb</p>
-              <p>(555) 123-4567</p>
-              <p>Mon-Fri: 9am - 6pm</p>
-            </div>
+              @prettywomanbyjo
+            </a>
+          </div>
 
-            <form action="#" class="space-y-6 font-sans">
-              <div>
-                <label class="block text-sm font-medium text-gray-700"
-                  >Name</label
-                >
-                <div
-                  class="mt-2 h-12 w-full rounded-md bg-white border border-gray-300 focus-within:border-brand-dark focus-within:ring-1 focus-within:ring-brand-dark transition"
-                ></div>
-              </div>
-              <div>
-                <div
-                  class="mt-2 h-32 w-full rounded-md bg-white border border-gray-300 focus-within:border-brand-dark focus-within:ring-1 focus-within:ring-brand-dark transition"
-                ></div>
-              </div>
+          <div
+            class="columns-2 gap-4 space-y-4 md:columns-3 lg:gap-8 lg:space-y-8"
+          >
+            <a
+              href="https://www.instagram.com/p/DO348E2CATB/"
+              target="_blank"
+              class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+            >
+              <img
+                srcset="
+                  ./images/gallery/gallery-1-sm.webp  600w,
+                  ./images/gallery/gallery-1-lg.webp 1200w
+                "
+                sizes="(max-width: 768px) 256px, 320px"
+                src="./images/gallery/gallery_1-lg.webp"
+                alt="Red gel manicure with gold flakes"
+                loading="lazy"
+                class="h-full w-full object-cover"
+              />
 
               <div
-                class="h-12 w-full rounded-lg bg-brand-dark text-white px-6 py-3 md:w-auto hover:bg-gray-800 transition cursor-pointer flex items-center justify-center font-semibold"
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition duration-300 group-hover:opacity-100"
               >
-                Send Message
+                <div
+                  class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  View
+                </div>
               </div>
-            </form>
+            </a>
+
+            <a
+              href="https://www.instagram.com/p/DNI2UXYsb3Q/"
+              target="_blank"
+              class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+            >
+              <img
+                srcset="
+                  ./images/gallery/gallery-2-sm.webp  600w,
+                  ./images/gallery/gallery-2-lg.webp 1200w
+                "
+                sizes="(max-width: 768px) 256px, 320px"
+                src="./images/gallery/gallery_2-lg.webp"
+                alt="Red gel manicure with gold flakes"
+                loading="lazy"
+                class="h-full w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  View
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/p/DOizi0vCO3Y/"
+              target="_blank"
+              class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+            >
+              <img
+                srcset="
+                  ./images/gallery/gallery-3-sm.webp  600w,
+                  ./images/gallery/gallery-3-lg.webp 1200w
+                "
+                sizes="(max-width: 768px) 256px, 320px"
+                src="./images/gallery/gallery_3-lg.webp"
+                alt="Red gel manicure with gold flakes"
+                loading="lazy"
+                class="h-full w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  View
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/p/CxL6o0AM405/"
+              target="_blank"
+              class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+            >
+              <img
+                srcset="
+                  ./images/gallery/gallery-4-sm.webp  600w,
+                  ./images/gallery/gallery-4-lg.webp 1200w
+                "
+                sizes="(max-width: 768px) 256px, 320px"
+                src="./images/gallery/gallery_4-lg.webp"
+                alt="Red gel manicure with gold flakes"
+                loading="lazy"
+                class="h-full w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  View
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/p/CojtvERM4aR/"
+              target="_blank"
+              class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+            >
+              <img
+                srcset="
+                  ./images/gallery/gallery-5-sm.webp  600w,
+                  ./images/gallery/gallery-5-lg.webp 1200w
+                "
+                sizes="(max-width: 768px) 256px, 320px"
+                src="./images/gallery/gallery_5-lg.webp"
+                alt="Red gel manicure with gold flakes"
+                loading="lazy"
+                class="h-full w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  View
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/p/DQ-K4aoiGYF/"
+              target="_blank"
+              class="group relative block overflow-hidden rounded-lg break-inside-avoid"
+            >
+              <img
+                srcset="
+                  ./images/gallery/gallery-6-sm.webp  600w,
+                  ./images/gallery/gallery-6-lg.webp 1200w
+                "
+                sizes="(max-width: 768px) 256px, 320px"
+                src="./images/gallery/gallery_6-lg.webp"
+                alt="Red gel manicure with gold flakes"
+                loading="lazy"
+                class="h-full w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="flex items-center gap-2 text-white font-sans text-sm font-medium tracking-wide uppercase"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  View
+                </div>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div
-      id="pricelist-modal"
-      class="fixed inset-0 z-50 flex items-center justify-center invisible opacity-0"
-    >
-      <div
-        id="pricelist-backdrop"
-        class="absolute inset-0 bg-black/60 backdrop-blur-sm"
-      ></div>
+      <section class="bg-brand-light py-24 md:py-40">
+        <div class="mx-auto max-w-6xl px-6">
+          <h2
+            class="font-serif mb-12 text-center text-4xl md:text-5xl text-brand-dark md:mb-16"
+          >
+            Hear From Our Clients
+          </h2>
+
+          <div class="mb-24 md:flex md:gap-16 md:items-center">
+            <div class="relative mb-12 md:mb-0 md:w-1/2">
+              <div
+                class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-brand-gold/50 md:-top-6 md:-left-6"
+              ></div>
+              <img
+                srcset="
+                  ./images/testimonials/miss7_1-sm.webp  600w,
+                  ./images/testimonials/miss7_1-lg.webp 1200w
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+                src="./images/testimonials/miss7_1-lg.webp"
+                alt="Miss7 Article Feature - Salon Interior"
+                loading="lazy"
+                class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
+              />
+            </div>
+
+            <div class="md:w-1/2">
+              <p
+                class="font-sans mb-4 text-xs font-bold tracking-[0.2em] text-brand-primary uppercase"
+              >
+                As Seen In
+              </p>
+              <h3
+                class="font-serif mb-6 text-2xl md:text-3xl font-semibold leading-tight text-brand-dark"
+              >
+                Miss7: Zagrebački salon za manikuru i pedikuru osvojio nas je i
+                posebnim uređenjem
+              </h3>
+              <blockquote
+                class="font-serif mb-6 text-lg italic text-brand-primary leading-relaxed"
+              >
+                "Svaka žena želi biti lijepa na svoj način, a u Pretty Woman by
+                Jo, vrhunskim uslugama manikure i pedikure to se vrlo lako može
+                postići..."
+              </blockquote>
+              <a
+                href="https://miss7.24sata.hr/beauty/pretty-woman-by-jo-zagrebacki-salon-za-manikuru-i-pedikuru-osvojio-nas-je-i-posebnim-uredenjem-43363"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-sans font-semibold text-brand-dark hover:underline"
+              >
+                Read the full article →
+              </a>
+            </div>
+          </div>
+
+          <div class="mb-24 md:flex md:gap-16 md:items-center">
+            <div class="relative mb-12 md:mb-0 md:w-1/2">
+              <div
+                class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-brand-gold/50 md:-top-6 md:-left-6"
+              ></div>
+              <img
+                srcset="
+                  ./images/testimonials/miss7_2-sm.webp  600w,
+                  ./images/testimonials/miss7_2-lg.webp 1200w
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+                src="./images/testimonials/miss7_2-lg.webp"
+                alt="Miss7 Article Feature - Manicure Details"
+                loading="lazy"
+                class="relative h-64 w-full rounded-lg object-cover shadow-lg md:h-80"
+              />
+            </div>
+
+            <div class="md:w-1/2">
+              <p
+                class="font-sans mb-4 text-xs font-bold tracking-[0.2em] text-brand-primary uppercase"
+              >
+                As Seen In
+              </p>
+              <h3
+                class="font-serif mb-6 text-2xl md:text-3xl font-semibold leading-tight text-brand-dark"
+              >
+                Miss7: Isprobala sam manikuru o kojoj svi pričaju, evo mojih
+                dojmova
+              </h3>
+              <blockquote
+                class="font-serif mb-6 text-lg italic text-brand-primary leading-relaxed"
+              >
+                "Za vrijeme tretmana opustila sam se uz šalicu izvrsnog voćnog
+                čaja, a vlasnica salona, Josipa Martinović, oduševila me svojom
+                ljubaznošću, toplinom i opuštenom atmosferom..."
+              </blockquote>
+              <a
+                href="https://miss7.24sata.hr/beauty/isprobala-sam-manikuru-o-kojoj-svi-pricaju-evo-mojih-dojmova-43542"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-sans font-semibold text-brand-dark hover:underline"
+              >
+                Read the full article →
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div
+              class="rounded-lg bg-gray-50 p-8 border border-brand-light shadow-sm"
+            >
+              <p
+                class="font-sans mb-6 text-sm font-light leading-relaxed text-brand-primary"
+              >
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. The
+                staff was so friendly and my nails have never looked better!"
+              </p>
+              <p class="font-sans font-semibold text-brand-dark">- Sarah J.</p>
+            </div>
+
+            <div
+              class="rounded-lg bg-gray-50 p-8 border border-brand-light shadow-sm"
+            >
+              <p
+                class="font-sans mb-6 text-sm font-light leading-relaxed text-brand-primary"
+              >
+                "Absolutely love this place! I showed them a picture from
+                Instagram and they recreated it perfectly."
+              </p>
+              <p class="font-sans font-semibold text-brand-dark">- Maria K.</p>
+            </div>
+
+            <div
+              class="rounded-lg bg-gray-50 p-8 border border-brand-light shadow-sm"
+            >
+              <p
+                class="font-sans mb-6 text-sm font-light leading-relaxed text-brand-primary"
+              >
+                "The best pedicure I've ever had. So relaxing and professional.
+                I'll definitely be back!"
+              </p>
+              <p class="font-sans font-semibold text-brand-dark">- Emily R.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 md:py-32 bg-white">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="flex flex-col-reverse gap-16 md:flex-row md:items-start">
+            <div class="relative w-full md:w-1/2 h-[400px] md:h-[500px]">
+              <div
+                class="absolute -top-4 -left-4 h-full w-full rounded-lg border border-gray-200 md:-top-8 md:-left-8"
+              ></div>
+              <div
+                class="relative h-full w-full overflow-hidden rounded-lg shadow-xl bg-gray-200"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.7935452466713!2d15.978074576785135!3d45.795363711281254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d65e1197f029%3A0xb1694cc227225783!2sTrnjanska%20cesta%2069%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1763306674216!5m2!1sen!2shr"
+                  width="100%"
+                  height="100%"
+                  title="Google Map showing the location of Pretty Woman by Jo salon"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/2">
+              <h2 class="font-serif mb-8 text-4xl md:text-5xl text-brand-dark">
+                Visit Us
+              </h2>
+
+              <div
+                class="mb-10 space-y-2 font-sans text-brand-primary font-light text-lg"
+              >
+                <p>Trnjanska cesta 69, Zagreb</p>
+                <p>(555) 123-4567</p>
+                <p>Mon-Fri: 9am - 6pm</p>
+              </div>
+
+              <form action="#" class="space-y-6 font-sans">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"
+                    >Name</label
+                  >
+                  <div
+                    class="mt-2 h-12 w-full rounded-md bg-white border border-gray-300 focus-within:border-brand-dark focus-within:ring-1 focus-within:ring-brand-dark transition"
+                  ></div>
+                </div>
+                <div>
+                  <div
+                    class="mt-2 h-32 w-full rounded-md bg-white border border-gray-300 focus-within:border-brand-dark focus-within:ring-1 focus-within:ring-brand-dark transition"
+                  ></div>
+                </div>
+
+                <div
+                  class="h-12 w-full rounded-lg bg-brand-dark text-white px-6 py-3 md:w-auto hover:bg-gray-800 transition cursor-pointer flex items-center justify-center font-semibold"
+                >
+                  Send Message
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div
-        id="pricelist-card"
-        class="relative z-10 h-[85vh] w-full max-w-2xl overflow-hidden rounded-xl bg-white shadow-2xl scale-95 opacity-0 m-4 flex flex-col"
+        id="pricelist-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center invisible opacity-0"
       >
         <div
-          class="flex items-center justify-between border-b border-gray-100 p-6 md:p-8 bg-brand-light"
+          id="pricelist-backdrop"
+          class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        ></div>
+
+        <div
+          id="pricelist-card"
+          class="relative z-10 h-[85vh] w-full max-w-2xl overflow-hidden rounded-xl bg-white shadow-2xl scale-95 opacity-0 m-4 flex flex-col"
         >
-          <h2 class="font-serif text-2xl md:text-3xl text-brand-dark">
-            Service Menu
-          </h2>
-          <button
-            id="close-pricelist"
-            class="group rounded-full p-2 hover:bg-gray-200 transition"
+          <div
+            class="flex items-center justify-between border-b border-gray-100 p-6 md:p-8 bg-brand-light"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6 text-gray-500 group-hover:text-brand-dark"
+            <h2 class="font-serif text-2xl md:text-3xl text-brand-dark">
+              Service Menu
+            </h2>
+            <button
+              id="close-pricelist"
+              class="group rounded-full p-2 hover:bg-gray-200 transition"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div
-          class="flex-1 overflow-y-auto p-6 md:p-10 space-y-10 hide-scrollbar"
-        >
-          <div>
-            <div class="flex items-center gap-4 mb-6">
-              <h3
-                class="font-sans text-xs font-bold tracking-[0.2em] text-brand-gold uppercase shrink-0"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6 text-gray-500 group-hover:text-brand-dark"
               >
-                Hand Care
-              </h3>
-              <div class="h-px w-full bg-gray-200"></div>
-            </div>
-            <ul class="space-y-4 font-sans text-brand-primary">
-              <li class="flex items-end justify-between">
-                <span
-                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
-                  >Classic Manicure</span
-                >
-                <span
-                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
-                ></span>
-                <span
-                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
-                  >$35</span
-                >
-              </li>
-              <li class="flex items-end justify-between">
-                <span
-                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
-                  >Gel Manicure</span
-                >
-                <span
-                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
-                ></span>
-                <span
-                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
-                  >$50</span
-                >
-              </li>
-              <li class="flex items-end justify-between">
-                <span
-                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
-                  >Russian Manicure (E-File)</span
-                >
-                <span
-                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
-                ></span>
-                <span
-                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
-                  >$65</span
-                >
-              </li>
-              <li class="flex items-end justify-between">
-                <span
-                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
-                  >Extensions (Full Set)</span
-                >
-                <span
-                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
-                ></span>
-                <span
-                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
-                  >$85+</span
-                >
-              </li>
-            </ul>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
           </div>
 
-          <div>
-            <div class="flex items-center gap-4 mb-6">
-              <h3
-                class="font-sans text-xs font-bold tracking-[0.2em] text-brand-gold uppercase shrink-0"
-              >
-                Foot Care
-              </h3>
-              <div class="h-px w-full bg-gray-200"></div>
+          <div
+            class="flex-1 overflow-y-auto p-6 md:p-10 space-y-10 hide-scrollbar"
+          >
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <h3
+                  class="font-sans text-xs font-bold tracking-[0.2em] text-brand-gold uppercase shrink-0"
+                >
+                  Hand Care
+                </h3>
+                <div class="h-px w-full bg-gray-200"></div>
+              </div>
+              <ul class="space-y-4 font-sans text-brand-primary">
+                <li class="flex items-end justify-between">
+                  <span
+                    class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                    >Classic Manicure</span
+                  >
+                  <span
+                    class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                  ></span>
+                  <span
+                    class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                    >$35</span
+                  >
+                </li>
+                <li class="flex items-end justify-between">
+                  <span
+                    class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                    >Gel Manicure</span
+                  >
+                  <span
+                    class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                  ></span>
+                  <span
+                    class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                    >$50</span
+                  >
+                </li>
+                <li class="flex items-end justify-between">
+                  <span
+                    class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                    >Russian Manicure (E-File)</span
+                  >
+                  <span
+                    class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                  ></span>
+                  <span
+                    class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                    >$65</span
+                  >
+                </li>
+                <li class="flex items-end justify-between">
+                  <span
+                    class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                    >Extensions (Full Set)</span
+                  >
+                  <span
+                    class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                  ></span>
+                  <span
+                    class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                    >$85+</span
+                  >
+                </li>
+              </ul>
             </div>
-            <ul class="space-y-4 font-sans text-brand-primary">
-              <li class="flex items-end justify-between">
-                <span
-                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
-                  >Express Pedicure</span
+
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <h3
+                  class="font-sans text-xs font-bold tracking-[0.2em] text-brand-gold uppercase shrink-0"
                 >
-                <span
-                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
-                ></span>
-                <span
-                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
-                  >$45</span
+                  Foot Care
+                </h3>
+                <div class="h-px w-full bg-gray-200"></div>
+              </div>
+              <ul class="space-y-4 font-sans text-brand-primary">
+                <li class="flex items-end justify-between">
+                  <span
+                    class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                    >Express Pedicure</span
+                  >
+                  <span
+                    class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                  ></span>
+                  <span
+                    class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                    >$45</span
+                  >
+                </li>
+                <li class="flex items-end justify-between">
+                  <span
+                    class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                    >Spa Gel Pedicure</span
+                  >
+                  <span
+                    class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                  ></span>
+                  <span
+                    class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                    >$65</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <h3
+                  class="font-sans text-xs font-bold tracking-[0.2em] text-brand-gold uppercase shrink-0"
                 >
-              </li>
-              <li class="flex items-end justify-between">
-                <span
-                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
-                  >Spa Gel Pedicure</span
-                >
-                <span
-                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
-                ></span>
-                <span
-                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
-                  >$65</span
-                >
-              </li>
-            </ul>
+                  Nail Art Add-ons
+                </h3>
+                <div class="h-px w-full bg-gray-200"></div>
+              </div>
+              <ul class="space-y-4 font-sans text-brand-primary">
+                <li class="flex items-end justify-between">
+                  <span
+                    class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                    >French Tips</span
+                  >
+                  <span
+                    class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                  ></span>
+                  <span
+                    class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                    >+$15</span
+                  >
+                </li>
+                <li class="flex items-end justify-between">
+                  <span
+                    class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                    >Chrome / Glazed Donut</span
+                  >
+                  <span
+                    class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                  ></span>
+                  <span
+                    class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                    >+$15</span
+                  >
+                </li>
+                <li class="flex items-end justify-between">
+                  <span
+                    class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                    >Custom Art (Per Nail)</span
+                  >
+                  <span
+                    class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                  ></span>
+                  <span
+                    class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                    >$5+</span
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <div class="flex items-center gap-4 mb-6">
-              <h3
-                class="font-sans text-xs font-bold tracking-[0.2em] text-brand-gold uppercase shrink-0"
-              >
-                Nail Art Add-ons
-              </h3>
-              <div class="h-px w-full bg-gray-200"></div>
-            </div>
-            <ul class="space-y-4 font-sans text-brand-primary">
-              <li class="flex items-end justify-between">
-                <span
-                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
-                  >French Tips</span
-                >
-                <span
-                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
-                ></span>
-                <span
-                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
-                  >+$15</span
-                >
-              </li>
-              <li class="flex items-end justify-between">
-                <span
-                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
-                  >Chrome / Glazed Donut</span
-                >
-                <span
-                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
-                ></span>
-                <span
-                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
-                  >+$15</span
-                >
-              </li>
-              <li class="flex items-end justify-between">
-                <span
-                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
-                  >Custom Art (Per Nail)</span
-                >
-                <span
-                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
-                ></span>
-                <span
-                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
-                  >$5+</span
-                >
-              </li>
-            </ul>
+          <div
+            class="bg-brand-light p-4 text-center text-xs text-gray-500 font-sans"
+          >
+            * Prices may vary based on complexity and length.
           </div>
-        </div>
-
-        <div
-          class="bg-brand-light p-4 text-center text-xs text-gray-500 font-sans"
-        >
-          * Prices may vary based on complexity and length.
         </div>
       </div>
-    </div>
+    </main>
 
     <footer
       class="bg-brand-dark py-20 md:py-24 text-gray-400 pb-[env(safe-area-inset-bottom)]"
@@ -1104,7 +1155,7 @@
         </div>
 
         <div class="mt-12 border-t border-gray-600 pt-8 text-center">
-          <p class="font-sans text-xs text-gray-500">
+          <p class="font-sans text-xs text-white/50">
             © 2025 PrettyWoman by Jo. All rights reserved.
           </p>
         </div>
