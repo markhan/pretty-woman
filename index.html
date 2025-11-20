@@ -269,6 +269,32 @@
             </div>
           </div>
         </div>
+        <div class="mt-16 text-center">
+          <button
+            id="open-pricelist"
+            class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-brand-dark px-8 py-3 transition duration-300 hover:bg-brand-dark"
+          >
+            <span
+              class="font-sans text-sm font-semibold tracking-widest uppercase text-brand-dark transition duration-300 group-hover:text-white"
+            >
+              View Full Price List
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-4 w-4 text-brand-dark transition duration-300 group-hover:text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -837,6 +863,214 @@
       </div>
     </section>
 
+    <div
+      id="pricelist-modal"
+      class="fixed inset-0 z-50 flex items-center justify-center invisible opacity-0"
+    >
+      <div
+        id="pricelist-backdrop"
+        class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+      ></div>
+
+      <div
+        id="pricelist-card"
+        class="relative z-10 h-[85vh] w-full max-w-2xl overflow-hidden rounded-xl bg-white shadow-2xl scale-95 opacity-0 m-4 flex flex-col"
+      >
+        <div
+          class="flex items-center justify-between border-b border-gray-100 p-6 md:p-8 bg-brand-light"
+        >
+          <h2 class="font-serif text-2xl md:text-3xl text-brand-dark">
+            Service Menu
+          </h2>
+          <button
+            id="close-pricelist"
+            class="group rounded-full p-2 hover:bg-gray-200 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6 text-gray-500 group-hover:text-brand-dark"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="flex-1 overflow-y-auto p-6 md:p-10 space-y-10 hide-scrollbar"
+        >
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <h3
+                class="font-sans text-xs font-bold tracking-[0.2em] text-brand-gold uppercase shrink-0"
+              >
+                Hand Care
+              </h3>
+              <div class="h-px w-full bg-gray-200"></div>
+            </div>
+            <ul class="space-y-4 font-sans text-brand-primary">
+              <li class="flex items-end justify-between">
+                <span
+                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                  >Classic Manicure</span
+                >
+                <span
+                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                ></span>
+                <span
+                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                  >$35</span
+                >
+              </li>
+              <li class="flex items-end justify-between">
+                <span
+                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                  >Gel Manicure</span
+                >
+                <span
+                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                ></span>
+                <span
+                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                  >$50</span
+                >
+              </li>
+              <li class="flex items-end justify-between">
+                <span
+                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                  >Russian Manicure (E-File)</span
+                >
+                <span
+                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                ></span>
+                <span
+                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                  >$65</span
+                >
+              </li>
+              <li class="flex items-end justify-between">
+                <span
+                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                  >Extensions (Full Set)</span
+                >
+                <span
+                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                ></span>
+                <span
+                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                  >$85+</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <h3
+                class="font-sans text-xs font-bold tracking-[0.2em] text-brand-gold uppercase shrink-0"
+              >
+                Foot Care
+              </h3>
+              <div class="h-px w-full bg-gray-200"></div>
+            </div>
+            <ul class="space-y-4 font-sans text-brand-primary">
+              <li class="flex items-end justify-between">
+                <span
+                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                  >Express Pedicure</span
+                >
+                <span
+                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                ></span>
+                <span
+                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                  >$45</span
+                >
+              </li>
+              <li class="flex items-end justify-between">
+                <span
+                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                  >Spa Gel Pedicure</span
+                >
+                <span
+                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                ></span>
+                <span
+                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                  >$65</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <h3
+                class="font-sans text-xs font-bold tracking-[0.2em] text-brand-gold uppercase shrink-0"
+              >
+                Nail Art Add-ons
+              </h3>
+              <div class="h-px w-full bg-gray-200"></div>
+            </div>
+            <ul class="space-y-4 font-sans text-brand-primary">
+              <li class="flex items-end justify-between">
+                <span
+                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                  >French Tips</span
+                >
+                <span
+                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                ></span>
+                <span
+                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                  >+$15</span
+                >
+              </li>
+              <li class="flex items-end justify-between">
+                <span
+                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                  >Chrome / Glazed Donut</span
+                >
+                <span
+                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                ></span>
+                <span
+                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                  >+$15</span
+                >
+              </li>
+              <li class="flex items-end justify-between">
+                <span
+                  class="font-medium text-brand-dark bg-white pr-2 relative z-10"
+                  >Custom Art (Per Nail)</span
+                >
+                <span
+                  class="flex-1 border-b border-dotted border-gray-300 mb-1 mx-1"
+                ></span>
+                <span
+                  class="font-semibold text-brand-dark bg-white pl-2 relative z-10"
+                  >$5+</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="bg-brand-light p-4 text-center text-xs text-gray-500 font-sans"
+        >
+          * Prices may vary based on complexity and length.
+        </div>
+      </div>
+    </div>
+
     <footer
       class="bg-brand-dark py-20 md:py-24 text-gray-400 pb-[env(safe-area-inset-bottom)]"
     >
@@ -971,6 +1205,51 @@
           }
         );
       });
+
+      // === PRICE LIST MODAL LOGIC ===
+      const modal = document.getElementById('pricelist-modal');
+      const openBtn = document.getElementById('open-pricelist');
+      const closeBtn = document.getElementById('close-pricelist');
+      const backdrop = document.getElementById('pricelist-backdrop');
+      const card = document.getElementById('pricelist-card');
+
+      // Open
+      openBtn.addEventListener('click', () => {
+        // 1. Make visible
+        gsap.set(modal, { autoAlpha: 1 }); // autoAlpha handles opacity + visibility
+
+        // 2. Animate Backdrop
+        gsap.fromTo(backdrop, { opacity: 0 }, { opacity: 1, duration: 0.4 });
+
+        // 3. Animate Card (Scale Up + Fade In)
+        gsap.fromTo(
+          card,
+          { scale: 0.95, opacity: 0, y: 20 },
+          { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.7)' }
+        );
+
+        // 4. Stop Body Scroll (Use Lenis if active, otherwise CSS)
+        lenis.stop();
+      });
+
+      // Close Function
+      const closeMenu = () => {
+        // Animate Out
+        gsap.to(backdrop, { opacity: 0, duration: 0.3 });
+        gsap.to(card, {
+          scale: 0.95,
+          opacity: 0,
+          y: 20,
+          duration: 0.3,
+          onComplete: () => {
+            gsap.set(modal, { autoAlpha: 0 }); // Hide after animation
+            lenis.start(); // Resume scroll
+          },
+        });
+      };
+
+      closeBtn.addEventListener('click', closeMenu);
+      backdrop.addEventListener('click', closeMenu); // Close when clicking outside
     </script>
   </body>
 </html>
